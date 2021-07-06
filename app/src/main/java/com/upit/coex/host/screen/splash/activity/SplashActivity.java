@@ -76,7 +76,7 @@ public class SplashActivity extends BaseActivity<SplashActivityViewModel> {
 
     public void checkPermission(){
         String[] permissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
-        Log.d("bao.nt", "bfdjsbfjdsb");
+        Log.d("cin", "bfdjsbfjdsb");
         mViewModal.requestPermission(permissions);
     }
 

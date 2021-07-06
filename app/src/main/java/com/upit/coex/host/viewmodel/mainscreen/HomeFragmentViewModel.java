@@ -29,17 +29,17 @@ public class HomeFragmentViewModel extends BaseFragmentViewModel {
 
     public void listRoom() {
         String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-        L.d("bao.nt", token);
+        L.d("cin", token);
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
                 .doCoo("Bearer " + token)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(response -> {
 //                    mLive.setValue(response.size());
-                    Log.d("bao.nt1", response.getData().size() + "");
+                    Log.d("cin1", response.getData().size() + "");
                     if (response.getData().size() > 0) {
 
-                        Log.d("bao.nt2", response.getData().get(0).getName() + "");
+                        Log.d("cin2", response.getData().get(0).getName() + "");
                         mCoDataLiveData.setValue((CoData) response.getData().get(0));
                         CoexSharedPreference.getInstance().put(CommonConstants.CO, response.getData().get(0));
                         CoexSharedPreference.getInstance().put(CommonConstants.COEX_ID, response.getData().get(0).getId());
@@ -47,7 +47,7 @@ public class HomeFragmentViewModel extends BaseFragmentViewModel {
                     }
 
                 }, throwable -> {
-                    Log.d("bao.nttttt", throwable.getMessage());
+                    Log.d("cintttt", throwable.getMessage());
                 }));
     }
 }

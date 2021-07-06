@@ -5,7 +5,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class LoginData extends BaseData {

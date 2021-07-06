@@ -115,7 +115,7 @@ public class DetailCo extends BaseActivity<ProfileActivityViewModel> implements 
             public void onClick(View v) {
 //                Intent intent = new Intent(, Step1.class);
 //                startActivity(intent);
-                Log.d("anhtu", "click back step 3");
+                Log.d("cin", "click back step 3");
                 DetailCo.this.finish();
             }
         });
@@ -155,7 +155,7 @@ public class DetailCo extends BaseActivity<ProfileActivityViewModel> implements 
         for (String e : co.getPhoto()) {
             mList.add(new Photo(e));
         }
-        Log.d("bao.nt", "----------------------------------" + mList.size());
+        Log.d("cin", "----------------------------------" + mList.size());
         // hien thi anh len viewpage
         Log.d("List", mList.size() + "");
         ListAdapterRes adapter = new ListAdapterRes(this, mList);
@@ -252,15 +252,15 @@ public class DetailCo extends BaseActivity<ProfileActivityViewModel> implements 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        L.d("bao.nt", "ondestroy step 3");
-        L.d("bao.nt", "----------------------");
+        L.d("cin", "ondestroy step 3");
+        L.d("cin", "----------------------");
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("anhtu", "pause step 3");
+        Log.d("cin", "pause step 3");
     }
 
 
@@ -277,7 +277,7 @@ public class DetailCo extends BaseActivity<ProfileActivityViewModel> implements 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        L.d("bao.nt", "new intent step 3");
+        L.d("cin", "new intent step 3");
     }
 
 }

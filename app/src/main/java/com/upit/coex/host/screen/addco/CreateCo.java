@@ -72,7 +72,7 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_coo);
 
-        Log.d("anhtu", "create step 3");
+        Log.d("cin", "create step 3");
         // tao load
         loading = new DialogLoading(this);
 
@@ -91,7 +91,7 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
             @Override
             public void onChanged(Pair pair) {
                 if (pair.first.equals(CommonConstants.CREATE_CO)) {
-                    Log.d("bao.nt", "click create co1");
+                    Log.d("cin", "click create co1");
                     //CoexToast.makeToast(AddRoom.this, Toast.LENGTH_LONG, pair.second.toString());
                     loading.dissLoadingDialog();
                     Intent intent1 = new Intent(CreateCo.this, MainScreen.class);
@@ -123,7 +123,7 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
         super.onStart();
         showCo();
 //        showService();
-        Log.d("anhtu", "start step 3");
+        Log.d("cin", "start step 3");
 
     }
 
@@ -161,7 +161,7 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
             public void onClick(View v) {
 //                Intent intent = new Intent(, Step1.class);
 //                startActivity(intent);
-                Log.d("anhtu", "click back step 3");
+                Log.d("cin", "click back step 3");
                 CreateCo.this.finish();
             }
         });
@@ -177,7 +177,7 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
         btnCreateCo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("bao.nt", "click create co");
+                Log.d("cin", "click create co");
                 loading.startLoadingDialog();
                 mViewModal.createCo(co);
             }
@@ -363,15 +363,15 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        L.d("bao.nt", "ondestroy step 3");
-        L.d("bao.nt", "----------------------");
+        L.d("cin", "ondestroy step 3");
+        L.d("cin", "----------------------");
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("anhtu", "pause step 3");
+        Log.d("cin", "pause step 3");
     }
 
 
@@ -388,7 +388,7 @@ public class CreateCo extends BaseActivity<CoActivityViewModel> implements CoCon
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        L.d("bao.nt", "new intent step 3");
+        L.d("cin", "new intent step 3");
     }
 
 }

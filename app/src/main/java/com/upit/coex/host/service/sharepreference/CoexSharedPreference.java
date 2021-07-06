@@ -8,7 +8,7 @@ import com.upit.coex.host.CoexApplication;
 import static com.upit.coex.host.constants.CommonConstants.PREFS_NAME;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class CoexSharedPreference {

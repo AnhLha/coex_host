@@ -42,7 +42,7 @@ public class SettingActivityViewModel extends BaseFragmentViewModel {
         String token_fire_base = CoexSharedPreference.getInstance().get(CommonConstants.COEX_FIREBASE_TOKEN, String.class);
         //RequestBody coworking = RequestBody.create(MediaType.parse("/form-data"), sCoworing);
         LogoutRequest request = new LogoutRequest(token_fire_base);
-        L.d("bao.nt", token,"|" + token_fire_base);
+        L.d("cin", token,"|" + token_fire_base);
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(LogoutAPI.class)
                 .doLogout("Bearer " + token, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -51,9 +51,9 @@ public class SettingActivityViewModel extends BaseFragmentViewModel {
 
                     mCoDataLiveData.setValue("Logout Succes");
 ////                    mLive.setValue(response.size());
-                    Log.d("bao.nt1", "jhgkghkho");
+                    Log.d("cin1", "jhgkghkho");
 //                    if (response.getData().size() > 0) {
-//                        Log.d("bao.nt2", response.getData().get(0).getName() + "");
+//                        Log.d("cin2", response.getData().get(0).getName() + "");
 ////                        mCoDataLiveData.setValue((CoData) response.getData().get(0));
 //                    }
 
@@ -61,11 +61,11 @@ public class SettingActivityViewModel extends BaseFragmentViewModel {
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null) {
                         mCoDataFailData.setValue( error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     } else {
                         mCoDataFailData.setValue(throwable.getMessage());
                     }
-                    Log.d("bao.nttttt", throwable.getMessage());
+                    Log.d("cintttt", throwable.getMessage());
                 }));
     }
 }

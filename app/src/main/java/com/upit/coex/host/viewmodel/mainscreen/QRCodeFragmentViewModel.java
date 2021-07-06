@@ -44,13 +44,13 @@ public class QRCodeFragmentViewModel extends BaseFragmentViewModel {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(response -> {
-                    Log.d("bao.nt","-----------------------");
+                    Log.d("cin","-----------------------");
                     this.mTransactionLiveData.setValue(response.getData());
                 }, throwable -> {
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null) {
                         this.mError.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     } else {
                         this.mError.setValue(throwable.getMessage());
                     }
@@ -76,7 +76,7 @@ public class QRCodeFragmentViewModel extends BaseFragmentViewModel {
                         BaseDataError error = new BaseDataError(throwable);
                         if (error.getmMessage() != null) {
                             this.mError.setValue(error.getmMessage());
-                            Log.d("bao.nt", error.getmMessage());
+                            Log.d("cin", error.getmMessage());
                         } else {
                             this.mError.setValue(throwable.getMessage());
                         }
@@ -93,7 +93,7 @@ public class QRCodeFragmentViewModel extends BaseFragmentViewModel {
                         BaseDataError error = new BaseDataError(throwable);
                         if (error.getmMessage() != null) {
                             this.mError.setValue(error.getmMessage());
-                            Log.d("bao.nt", error.getmMessage());
+                            Log.d("cin", error.getmMessage());
                         } else {
                             this.mError.setValue(throwable.getMessage());
                         }

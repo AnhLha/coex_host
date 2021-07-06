@@ -54,7 +54,7 @@ public class ItemCalendarAdapter extends BaseAdapter {
 //                FrameLayout.LayoutParams flRootLayoutParams = (FrameLayout.LayoutParams) view.findViewById(R.id.flRoot).getLayoutParams();
 //                flRootLayoutParams.height = mHeight;
 //                view.findViewById(R.id.flRoot).setBackgroundColor(view.getResources().getColor(R.color.colorAccent,null));
-//                Log.d("bao.nt", ""+(FrameLayout.LayoutParams) view.findViewById(R.id.flRoot).getLayoutParams());
+//                Log.d("cin", ""+(FrameLayout.LayoutParams) view.findViewById(R.id.flRoot).getLayoutParams());
                 view.setMinimumHeight(mHeight);
             }
         } else {

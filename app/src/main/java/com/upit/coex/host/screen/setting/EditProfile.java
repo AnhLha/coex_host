@@ -44,7 +44,7 @@ public class EditProfile extends BaseActivity<ProfileActivityViewModel> implemen
 
         Intent intent = getIntent();
         coData = (CoData) intent.getSerializableExtra("SEND_EDIT_PROFILE");
-//        Log.d("bao.nt", coData.getName() + "|" + coData.getPhone());
+//        Log.d("cin", coData.getName() + "|" + coData.getPhone());
 
         // set data
     }
@@ -59,7 +59,7 @@ public class EditProfile extends BaseActivity<ProfileActivityViewModel> implemen
             public void onChanged(EditProfileData s) {
 //                intent.putExtra("name", edtName.getText().toString());
 //                intent.putExtra("phone", edtPhone.getText().toString());
-                Log.d("bao.nt", "vao day hihihihihi");
+                Log.d("cin", "vao day hihihihihi");
                 Intent data = new Intent(EditProfile.this, Profile.class);
                 data.putExtra("update_profile", s);
                 setResult(RESULT_OK, data);
@@ -108,7 +108,7 @@ public class EditProfile extends BaseActivity<ProfileActivityViewModel> implemen
 
 
     public void startDialogConfirm(){
-        Log.d("bao.nt", "Co vao day nay1");
+        Log.d("cin", "Co vao day nay1");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View view = inflater.inflate(R.layout.confirm_change, null);

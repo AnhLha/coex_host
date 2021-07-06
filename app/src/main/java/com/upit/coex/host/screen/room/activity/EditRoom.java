@@ -45,7 +45,7 @@ public class EditRoom extends BaseActivity<RoomDetailActivityViewModel> implemen
         // get intent
         Intent intent = getIntent();
         roomData = (RoomData) intent.getSerializableExtra("ID_ROOM");
-        Log.d("bao.nt", roomData.getId() + "|" + roomData.getName() + "");
+        Log.d("cin", roomData.getId() + "|" + roomData.getName() + "");
         bindView();
     }
 
@@ -63,7 +63,7 @@ public class EditRoom extends BaseActivity<RoomDetailActivityViewModel> implemen
                 Intent data = new Intent(EditRoom.this, RoomDetailActivity.class);
                 data.putExtra("update_room", s);
                 setResult(RESULT_OK, data);
-                Log.d("bao.nt", "chac la vao day");
+                Log.d("cin", "chac la vao day");
                 EditRoom.this.finish();
             }
         });
@@ -100,7 +100,7 @@ public class EditRoom extends BaseActivity<RoomDetailActivityViewModel> implemen
         btnCreateRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("bao.ntwww1", "vao onclik");
+                Log.d("cinwww1", "vao onclik");
 //                mViewModal.editRoom(id, name.getText().toString(), about.getText().toString(), price.getText().toString(), maxPersion.getText().toString() );
                 startDialogConfirm();
 
@@ -136,7 +136,7 @@ public class EditRoom extends BaseActivity<RoomDetailActivityViewModel> implemen
 
 
     public void startDialogConfirm(){
-        Log.d("bao.nt", "Co vao day nay1");
+        Log.d("cin", "Co vao day nay1");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View view = inflater.inflate(R.layout.confirm_change, null);

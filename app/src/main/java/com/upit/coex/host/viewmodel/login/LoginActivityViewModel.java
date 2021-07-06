@@ -56,7 +56,7 @@ LoginActivityViewModel extends BaseActivityViewModel<String, LoginData, String> 
     public void doLogin(String email, String passWord) {
         if(!"".equals(email) && !"".equals(passWord)) {
 
-            Log.d("bao.nt", "token : " + CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class));
+            Log.d("cin", "token : " + CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class));
 
             FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(task -> {
                 if (!task.isSuccessful()) {
@@ -81,7 +81,7 @@ LoginActivityViewModel extends BaseActivityViewModel<String, LoginData, String> 
                                 BaseDataError error = new BaseDataError(throwable);
                                 if (error.getmMessage() != null) {
                                     mLiveFail.setValue(error.getmMessage());
-                                    Log.d("bao.nt", error.getmMessage());
+                                    Log.d("cin", error.getmMessage());
                                 } else {
                                     mLiveFail.setValue(throwable.getMessage());
                                 }
@@ -98,9 +98,9 @@ LoginActivityViewModel extends BaseActivityViewModel<String, LoginData, String> 
 
     @Override
     public void checkCo() {
-        Log.d("bao.nt", "3");
+        Log.d("cin", "3");
         String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-        L.d("bao.nt", token);
+        L.d("cin", token);
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
                 .doCoo("Bearer " + token)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -116,7 +116,7 @@ LoginActivityViewModel extends BaseActivityViewModel<String, LoginData, String> 
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null){
                         mLiveFail.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     }else {
                         mLiveFail.setValue(throwable.getMessage());
                     }

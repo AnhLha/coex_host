@@ -35,7 +35,7 @@ public class ListAdapterRes extends PagerAdapter {
         ImageView imgPhoto = layout.findViewById(R.id.imageTool);
 
         Photo photo = mListPhoto.get(position);
-        L.d("bao.nt","load image in adapter"+photo.getUrl());
+        L.d("cin","load image in adapter"+photo.getUrl());
         Glide.with(mContext).load(CommonConstants.IMAGE_LINK_BASE + photo.getUrl()).into(imgPhoto);
 
 //        Glide.with(context).load(IMAGE_LINK_BASE + data.getPhoto().get(0)).into(imgMain);

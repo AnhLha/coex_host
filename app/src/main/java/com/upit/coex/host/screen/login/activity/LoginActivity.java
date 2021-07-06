@@ -59,7 +59,7 @@ public class LoginActivity extends BaseActivity<LoginActivityViewModel> implemen
         mViewModal.getmLiveSuccess().observe(this, new Observer<LoginData>() {
             @Override
             public void onChanged(LoginData loginData) {
-                Log.d("bao.nt", "1");
+                Log.d("cin", "1");
                 dialogLoading.startLoadingDialog();
                 loginSuccess();
             }
@@ -99,7 +99,7 @@ public class LoginActivity extends BaseActivity<LoginActivityViewModel> implemen
         super.onStart();
 
 
-        Log.d("bao.nt", "------------------++++------------");
+        Log.d("cin", "------------------++++------------");
 
 
 
@@ -108,7 +108,7 @@ public class LoginActivity extends BaseActivity<LoginActivityViewModel> implemen
 //        mViewModal.getmLiveSuccess().observe(this, new Observer<LoginData>() {
 //            @Override
 //            public void onChanged(LoginData loginData) {
-//                Log.d("bao.nt", "1");
+//                Log.d("cin", "1");
 //                dialogLoading.startLoadingDialog();
 //                loginSuccess();
 //            }
@@ -188,7 +188,7 @@ public class LoginActivity extends BaseActivity<LoginActivityViewModel> implemen
 
     @Override
     public void loginSuccess() {
-        Log.d("bao.nt", "2");
+        Log.d("cin", "2");
         mViewModal.checkCo();
     }
 

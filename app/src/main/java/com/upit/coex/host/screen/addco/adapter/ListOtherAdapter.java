@@ -41,7 +41,7 @@ public class ListOtherAdapter extends RecyclerView.Adapter<ListOtherAdapter.View
         holder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position, boolean isLongClick) {
-                Log.d("anhtu", "1");
+                Log.d("cin", "1");
                 if (position >= 0 ){
                     list.remove(position);
                     notifyItemRemoved(position);
@@ -75,13 +75,13 @@ public class ListOtherAdapter extends RecyclerView.Adapter<ListOtherAdapter.View
             super(itemView);
             txtOther = itemView.findViewById(R.id.otherCoffee);
             imgClose = itemView.findViewById(R.id.close_other_coffee);
-            Log.d("anhtu", "3");
+            Log.d("cin", "3");
             imgClose.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            Log.d("anhtu", "2");
+            Log.d("cin", "2");
             itemClickListener.onClick(v, getAdapterPosition(), false);
         }
     }

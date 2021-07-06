@@ -84,7 +84,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
         // nhan data cua room
         intent = getIntent();
         roomData = (RoomData) intent.getSerializableExtra(CommonConstants.INTENT_DATA_ROOM);
-        Log.d("bao.nt111111", roomData.getId());
+        Log.d("cin111111", roomData.getId());
 
         //
         showRoom();
@@ -96,7 +96,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
         super.onStart();
 
 
-        Log.d("bao.nt", "chac la vao dayq1");
+        Log.d("cin", "chac la vao dayq1");
 
 //        mViewModal.getmLiveEditRoomSuccess().observe(this, new Observer<RoomRequest>() {
 //            @Override
@@ -106,7 +106,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
 //                roomData.setMaxPerson(roomRequest.getMaxPerson());
 //                roomData.setPrice(roomRequest.getPrice());
 //                showRoom();
-//                Log.d("bao.nt", "sao khong vao day");
+//                Log.d("cin", "sao khong vao day");
 //
 //            }
 //        });
@@ -126,7 +126,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
             public void onChanged(List<Long> longs) {
                 txtStatus.setVisibility(View.GONE);
                 mListDateBooking = longs;
-                Log.d("bao.nt22222", mListDateBooking.size() + "");
+                Log.d("cin22222", mListDateBooking.size() + "");
                 // hien thi len calendar
                 // hien thi thang hien tai
                 mCalendarView.setChoosedDaysByMonthArrayList(setDataCalender(mCalendarView.getmCalendar()));
@@ -151,7 +151,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
             public void onChanged(List<BookingRoomData> bookingRoomData) {
                 mProgressBar.setVisibility(View.GONE);
                 txtStatus.setVisibility(View.GONE);
-                Log.d("bao.nt", "lay duoc du lieu roi nhe bạn roi ");
+                Log.d("cin", "lay duoc du lieu roi nhe bạn roi ");
                 recyclerViewUser.setVisibility(View.VISIBLE);
                 showInfor(bookingRoomData);
 
@@ -235,7 +235,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
             @Override
             public void onClickedNext(Calendar calendar) {
 //                int month = calendar.get(Calendar.MONTH);
-//                Log.d("bao.nt1111mottttt", month + "");
+//                Log.d("cin1111mottttt", month + "");
 //                mCalendarView.setChoosedDaysByMonthArrayList(listDate[month]);
                 mCalendarView.setChoosedDaysByMonthArrayList(setDataCalender(calendar));
             }
@@ -247,7 +247,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
 
                 int flag = 0;
                 // hien gọi api get user
-                Log.d("bao.nt123456", calendar.get(Calendar.YEAR) + "|" + calendar.get(Calendar.MONTH) + "|" + calendar.get(Calendar.DATE));
+                Log.d("cin123456", calendar.get(Calendar.YEAR) + "|" + calendar.get(Calendar.MONTH) + "|" + calendar.get(Calendar.DATE));
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
                 int day = calendar.get(Calendar.DATE);
@@ -258,7 +258,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
 //                        mProgressBar.setVisibility(View.VISIBLE);
                         txtStatus.setVisibility(View.GONE);
                         flag = 1;
-                        Log.d("bao.nt2222221", "co vào đây nhé" + date + "|" + date.getYear() + "|" + date.getMonth() + "|" + date.getDate());
+                        Log.d("cin2222221", "co vào đây nhé" + date + "|" + date.getYear() + "|" + date.getMonth() + "|" + date.getDate());
                         mViewModal.getUsers(roomData.getId(), mListDateBooking.get(i));
                     }
                 }
@@ -411,14 +411,14 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
     public ArrayList<Integer> setDataCalender(Calendar calendar) {
         int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
-        Log.d("bao.nt123123", year + "|" + month);
+        Log.d("cin123123", year + "|" + month);
         ArrayList<Integer> days = new ArrayList<>();
         for (int i = 0; i < mListDateBooking.size(); i++) {
             Date date = new Date(mListDateBooking.get(i));
-            Log.d("bao.nt234", date.getYear() + "|" + date.getMonth() + "|" + date.getDate() + "|" + date.getDay());
+            Log.d("cin234", date.getYear() + "|" + date.getMonth() + "|" + date.getDate() + "|" + date.getDay());
             if ((date.getYear() + 1900) == year && date.getMonth() == month) {
                 days.add(date.getDate());
-                Log.d("bao.nt123123", days.get(days.size() - 1) + "");
+                Log.d("cin123123", days.get(days.size() - 1) + "");
             }
         }
         return days;
@@ -451,7 +451,7 @@ public class RoomDetailActivity extends BaseActivity<RoomDetailActivityViewModel
         if (requestCode == REQUEST_EDIT_ROOM) {
             if (resultCode == Activity.RESULT_OK) {
                 RoomRequest room = (RoomRequest) data.getSerializableExtra("update_room");
-                L.d("bao.nt", "result" + room.getName());
+                L.d("cin", "result" + room.getName());
                 txtNameRoom.setText(room.getName());
                 txtPriceRoom.setText(room.getPrice().toString() + " vnd/hour/person");
                 txtAboutRoom.setText(room.getAbout());

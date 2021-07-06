@@ -286,7 +286,7 @@ public class SearchAddressActivity extends BaseActivity<SearchAddressActivityVie
 
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 //            Toast.makeText(this, "back", Toast.LENGTH_SHORT).show();
-            Log.d("bao.nt", "------------------------------");
+            Log.d("cin", "------------------------------");
             setResult(Activity.RESULT_CANCELED);
             this.finish();
         }

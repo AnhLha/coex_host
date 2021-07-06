@@ -6,7 +6,7 @@ import java.util.Map;
 import io.reactivex.disposables.Disposable;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class CoexCommonCompositeDisposal {

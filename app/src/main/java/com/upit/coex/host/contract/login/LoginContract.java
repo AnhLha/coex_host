@@ -4,7 +4,7 @@ import com.upit.coex.host.contract.base.BaseInterfaceView;
 import com.upit.coex.host.contract.base.BaseInterfaceViewModel;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class LoginContract {

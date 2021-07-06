@@ -56,10 +56,10 @@ public class RoomDetailAdapter extends RecyclerView.Adapter<RoomDetailAdapter.Ro
             holder.txtStartTime.setText(bookingRoomData.getStartTimeDate() + ":00");
         }
         int endtime = bookingRoomData.getStartTimeDate() + bookingRoomData.getDurationDate();
-        Log.d("bao.nt", endtime + "");
+        Log.d("cin", endtime + "");
 //        holder.txtEndTime.setText(DateFormat.format("hh:mm", new Date(endtime)).toString());
         if (endtime < 10) {
-            Log.d("bao.nt", endtime + "");
+            Log.d("cin", endtime + "");
             holder.txtEndTime.setText("0" + endtime + ":00");
         } else {
             if (endtime == 24) {
@@ -91,14 +91,14 @@ public class RoomDetailAdapter extends RecyclerView.Adapter<RoomDetailAdapter.Ro
                 if (position >= 0) {
                     BookingRoomData data = mListBooking.get(position);
 //                    CoexSharedPreference.getInstance().put("DAY_UPDATE", data.getDateTime());
-                    Log.d("bao.nt", "aaaaaaaaaaaa");
+                    Log.d("cin", "aaaaaaaaaaaa");
                     Intent intent = new Intent(activity, DetailBooking.class);
 
                     intent.putExtra(CommonConstants.BOOKING_REFEREN, data);
                     //
-                    Log.d("bao.nt", "bbbbbbbbbb");
+                    Log.d("cin", "bbbbbbbbbb");
                     activity.startActivity(intent);
-                    Log.d("bao.nt", "cccccccccccc");
+                    Log.d("cin", "cccccccccccc");
 
 //                    // hien thi dialog
 //                    Dialog dialog = new Dialog(activity);

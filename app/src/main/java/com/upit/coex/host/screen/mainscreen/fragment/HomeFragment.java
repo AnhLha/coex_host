@@ -73,7 +73,7 @@ public class HomeFragment extends Fragment {
         mHomeFragmentViewModel = ViewModelProviders.of(this).get(HomeFragmentViewModel.class);
 
 
-        Log.d("bao.nt", "nguyen Thien Bao");
+        Log.d("cin", "nguyen Thien Bao");
     }
 
     @Override

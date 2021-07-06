@@ -27,7 +27,7 @@ public class BaseDataError extends BaseData{
             this.mMessage = error.getmMessage();
         } catch (Exception io) {
             // loi mang
-            Log.d("bao.nt", "------------------");
+            Log.d("cin", "------------------");
         }
     }
 

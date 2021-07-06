@@ -88,7 +88,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
         this.mQRCodeFragmentViewModel.getTransactionLiveData().observe(this, transactionData -> {
 
             Log.d("pbm",transactionData.getPayment()+"");
-            Log.d("bao.nt---", "this.mQRCodeFragmentViewModel.getTransactionLiveData().observe");
+            Log.d("cin---", "this.mQRCodeFragmentViewModel.getTransactionLiveData().observe");
             if (!mIsActivitiForResult) {
                 return;
             }
@@ -103,20 +103,20 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
             this.mTvPayment.setText(transactionData.getPayment()?"Yes":"No");
 //            this.mBtnCheckInOut.setText(CHECK_IN.equals(transactionData.getKey()) ? R.string.check_in : R.string.check_out);
 //            this.mBtnCheckInOut.setText("Check in");
-            Log.d("bao.nt--------", "b" + transactionData.getKey());
+            Log.d("cin--------", "b" + transactionData.getKey());
             if (CHECK_IN.equals(transactionData.getKey())) {
 //                this.mBtnCheckInOut.setText("Check in");
                 this.mBtnCheckInOut.setVisibility(View.VISIBLE);
                 this.mBtnCheckOut.setVisibility(View.GONE);
                 this.mFinish.setVisibility(View.GONE);
             } else if (CommonConstants.CHECK_OUT.equals(transactionData.getKey())) {
-                Log.d("bao.nt--------", "b" + transactionData.getKey());
+                Log.d("cin--------", "b" + transactionData.getKey());
                 this.mBtnCheckInOut.setVisibility(View.GONE);
                 this.mFinish.setVisibility(View.GONE);
                 this.mBtnCheckOut.setVisibility(View.VISIBLE);
 //                this.mBtnCheckOut.setText("Check out");
             } else {
-                Log.d("bao.nt--------", "a");
+                Log.d("cin--------", "a");
                 this.mBtnCheckOut.setVisibility(View.GONE);
                 this.mBtnCheckInOut.setVisibility(View.GONE);
                 this.mBtnCancle.setVisibility(View.GONE);
@@ -144,9 +144,9 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
 
         this.mQRCodeFragmentViewModel.getKeyCheckInOutLiveData().observe(this, key -> {
             if (key.first.toString().equals(CommonConstants.CHECK_IN)) {
-                Log.d("bao.nt", "--------------CHECK IN -cO VAO DAY");
+                Log.d("cin", "--------------CHECK IN -cO VAO DAY");
                 if (CHECK_IN_SUCCESS_KEY.equals(key.second.toString())) {
-                    Log.d("bao.nt", "-----------inNNNNNN----cO VAO DAY");
+                    Log.d("cin", "-----------inNNNNNN----cO VAO DAY");
                     showDialog(this.getContext(), true, true);
                     mBtnCheckInOut.setVisibility(View.GONE);
                     mBtnCheckOut.setVisibility(View.VISIBLE);
@@ -155,12 +155,12 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
                 }
             } else if (key.first.toString().equals(CommonConstants.CHECK_OUT)){
 
-                Log.d("bao.nt", "---------------cO VAO DAY");
+                Log.d("cin", "---------------cO VAO DAY");
                 if (CHECK_OUT_SUCCESS_KEY.equals(key.second.toString())) {
                     showDialog(this.getContext(), false, true);
                     mBtnCheckInOut.setVisibility(View.VISIBLE);
                     mBtnCheckOut.setVisibility(View.GONE);
-                    Log.d("bao.nt", "-----------AAAAAAAA----cO VAO DAY");
+                    Log.d("cin", "-----------AAAAAAAA----cO VAO DAY");
 
                 } else {
                     showDialog(this.getContext(), false, false);
@@ -184,8 +184,8 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
     @Override
     public void onStart() {
         super.onStart();
-        Log.d("bao.nt---", "public void onStart()");
-        Log.d("bao.nt---", "mIsActivitiForResult   " + mIsActivitiForResult);
+        Log.d("cin---", "public void onStart()");
+        Log.d("cin---", "mIsActivitiForResult   " + mIsActivitiForResult);
 
     }
 
@@ -193,7 +193,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        Log.d("bao.nt---", "-----------A-------------");
+        Log.d("cin---", "-----------A-------------");
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_qr_code, container, false);
 
@@ -250,7 +250,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("bao.nt---", "public void onActivityResult");
+        Log.d("cin---", "public void onActivityResult");
         mIsActivitiForResult = true;
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
@@ -330,7 +330,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
                 showQRCode();
                 break;
             case R.id.btn_check_in_out:
-                Log.d("bao.nt", "---------------" + mBtnCheckInOut.getText().toString());
+                Log.d("cin", "---------------" + mBtnCheckInOut.getText().toString());
 //                if (mBtnCheckInOut.getText().toString().equals(R.string.check_in)) {
                 this.mQRCodeFragmentViewModel.requestCheckInOut(this.mTransactionId, true);
 //                } else {
@@ -339,7 +339,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
                 break;
 
             case R.id.btn_check_out:
-                Log.d("bao.nt", "------11111---------" + mBtnCheckInOut.getText().toString());
+                Log.d("cin", "------11111---------" + mBtnCheckInOut.getText().toString());
                 this.mQRCodeFragmentViewModel.requestCheckInOut(this.mTransactionId, false);
                 break;
         }
@@ -356,7 +356,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener, Di
     @Override
     public void respondWhenClickPositiveButton() {
         //when turn off dialog
-        Log.d("bao.nt", "-----------------------------");
+        Log.d("cin", "-----------------------------");
         this.mRlErrorInfo.setVisibility(View.VISIBLE);
         this.mRlTransactionInformation.setVisibility(View.GONE);
 

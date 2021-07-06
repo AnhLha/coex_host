@@ -88,7 +88,7 @@ public class RoomDetailActivityViewModel extends BaseActivityViewModel<List<Book
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null){
                         mLiveFail.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     }else {
                         mLiveFail.setValue(throwable.getMessage());
                     }
@@ -113,7 +113,7 @@ public class RoomDetailActivityViewModel extends BaseActivityViewModel<List<Book
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null){
                         mLiveFail.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     }else {
                         mLiveFail.setValue(throwable.getMessage());
                     }
@@ -134,7 +134,7 @@ public class RoomDetailActivityViewModel extends BaseActivityViewModel<List<Book
                     .subscribe(baseData -> {
                         mLiveEditRoomSuccess.setValue(room);
                     }, throwable -> {
-                        Log.d("bao.nt", "vao day nay" + throwable.getMessage());
+                        Log.d("cin", "vao day nay" + throwable.getMessage());
                         mLiveEditRoomFail.setValue("Update fail");
                     }));
         }else if ("".equals(name)){

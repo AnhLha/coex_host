@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeReader.Bar
     @Override
     public void onScanned(Barcode barcode) {
         mBarcodeReader.playBeep();
-        Log.d("bao.nt", "barcode.displayValue : " + barcode.displayValue);
+        Log.d("cin", "barcode.displayValue : " + barcode.displayValue);
     }
 
     @Override

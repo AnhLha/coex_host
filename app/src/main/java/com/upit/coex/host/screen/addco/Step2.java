@@ -63,7 +63,7 @@ public class Step2 extends BaseActivity<CoActivityViewModel> implements CoContra
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        L.d("bao.nt", "oncreate step 2", getIntent().getStringExtra("room"));
+        L.d("cin", "oncreate step 2", getIntent().getStringExtra("room"));
 
         setContentView(R.layout.add_new_coo_step_2);
         mViewModal = ViewModelProviders.of(this).get(CoActivityViewModel.class);
@@ -71,18 +71,18 @@ public class Step2 extends BaseActivity<CoActivityViewModel> implements CoContra
         //
         Intent intent = getIntent();
         co = (CoRequest) intent.getSerializableExtra("co");
-//        L.d("bao.nt", (RoomRequest) intent.getSerializableExtra("room") + "");
+//        L.d("cin", (RoomRequest) intent.getSerializableExtra("room") + "");
 //        L.d("ListPic", co.getmPhoto().size() + "");
         bindView();
 
 
-        Log.d("anhtu", "create step 2");
+        Log.d("cin", "create step 2");
         //
         mViewModal.getmLiveSuccess().observe(this, new Observer<Pair>() {
             @Override
             public void onChanged(Pair pair) {
                 if (pair.first.equals(CommonConstants.STEP_2)) {
-                    Log.d("bao.nt", "create step 2---------------------------");
+                    Log.d("cin", "create step 2---------------------------");
 //                    CoexToast.makeToast(Step2.this, Toast.LENGTH_LONG, pair.second.toString());
 //                    isNotEmpty();
                     Intent intent23 = new Intent(Step2.this, CreateCo.class);
@@ -117,7 +117,7 @@ public class Step2 extends BaseActivity<CoActivityViewModel> implements CoContra
     @Override
     protected void onStart() {
         super.onStart();
-        L.d("bao.nt", "onstart step 2");
+        L.d("cin", "onstart step 2");
         // list room
         addControl();
         addOther();
@@ -262,14 +262,14 @@ public class Step2 extends BaseActivity<CoActivityViewModel> implements CoContra
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        L.d("bao.nt", "ondestroy step 2");
-        L.d("bao.nt", "----------------------");
+        L.d("cin", "ondestroy step 2");
+        L.d("cin", "----------------------");
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("anhtu", "pau step 2");
+        Log.d("cin", "pau step 2");
     }
 }

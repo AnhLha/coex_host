@@ -3,7 +3,7 @@ package com.upit.coex.host.service.logger;
 import android.util.Log;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class L {

@@ -60,11 +60,11 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
                     String idRoom = list.get(position).getId();
 
 
-                    Log.d("bao.nt", "onclick room adapter 2" + idRoom);
+                    Log.d("cin", "onclick room adapter 2" + idRoom);
                     Intent intent = new Intent(activity, RoomDetailActivity.class);
                     intent.putExtra(CommonConstants.INTENT_DATA_ROOM, list.get(position));
                     activity.startActivity(intent);
-                    Log.d("bao.nt", "onclick room adapter 3" + idRoom);
+                    Log.d("cin", "onclick room adapter 3" + idRoom);
 
                 }
             }
@@ -103,12 +103,12 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
 
             // button click
             btnCheck.setOnClickListener(this);
-//            Log.d("bao.nt", "onclick room adapter1");
+//            Log.d("cin", "onclick room adapter1");
         }
 
         @Override
         public void onClick(View v) {
-            Log.d("bao.nt", "onclick room adapter");
+            Log.d("cin", "onclick room adapter");
             itemClickListener.onClick(v, getAdapterPosition(), false);
         }
     }

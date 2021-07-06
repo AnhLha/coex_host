@@ -31,7 +31,7 @@ public class QRCode extends AppCompatImageView {
     }
 
     void setView(Context context, AttributeSet attrs){
-        String text="bao.nt"; // Whatever you need to encode in the QR code
+        String text="cin"; // Whatever you need to encode in the QR code
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         try {
             BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.QR_CODE,200,200);
@@ -41,6 +41,6 @@ public class QRCode extends AppCompatImageView {
         } catch (WriterException e) {
             e.printStackTrace();
         }
-        Log.d("bao.nt", "Vao day roi");
+        Log.d("cin", "Vao day roi");
     }
 }

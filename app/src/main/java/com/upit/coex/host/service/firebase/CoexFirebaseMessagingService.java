@@ -8,7 +8,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import static com.upit.coex.host.constants.CommonConstants.COEX_FIREBASE;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class CoexFirebaseMessagingService extends FirebaseMessagingService {

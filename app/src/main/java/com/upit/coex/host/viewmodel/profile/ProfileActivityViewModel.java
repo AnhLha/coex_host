@@ -98,7 +98,7 @@ public class ProfileActivityViewModel extends BaseActivityViewModel<ProfileData,
                                 }
 
                             }, throwable -> {
-                                Log.d("bao.nt", "sai roi nay" + throwable.getMessage());
+                                Log.d("cin", "sai roi nay" + throwable.getMessage());
                                 mLiveFail.setValue("Mật khẩu của bạn không đúng!");
                             }));
 
@@ -113,7 +113,7 @@ public class ProfileActivityViewModel extends BaseActivityViewModel<ProfileData,
 
     @Override
     public void me() {
-        Log.d("bao.nt", "ở dây vẫn vào được nè :" + CommonConstants.PREFIX_AUTHOR + "|" + CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class));
+        Log.d("cin", "ở dây vẫn vào được nè :" + CommonConstants.PREFIX_AUTHOR + "|" + CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class));
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(ProfileAPI.class)
                 .doMe(CommonConstants.PREFIX_AUTHOR + CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class))
                 .observeOn(AndroidSchedulers.mainThread())
@@ -121,9 +121,9 @@ public class ProfileActivityViewModel extends BaseActivityViewModel<ProfileData,
                 .subscribe(profileDataBaseReponce -> {
                     // data
                     mLive.setValue(profileDataBaseReponce.getData());
-                    Log.d("bao.nt", "Vao day roi nhe ban oi ");
+                    Log.d("cin", "Vao day roi nhe ban oi ");
                 }, throwable -> {
-                    Log.d("bao.nt", "sai ơ day nay" + throwable.getMessage());
+                    Log.d("cin", "sai ơ day nay" + throwable.getMessage());
                 }));
 
     }
@@ -140,7 +140,7 @@ public class ProfileActivityViewModel extends BaseActivityViewModel<ProfileData,
                     .subscribe(baseDataBaseReponce -> {
                         mLiveEditProfileSuccess.setValue(data);
                     }, throwable -> {
-                        Log.d("bao.nt", throwable.getMessage());
+                        Log.d("cin", throwable.getMessage());
                         mLiveEditProfileFail.setValue("Không thành công");
                     }));
 
@@ -167,9 +167,9 @@ public class ProfileActivityViewModel extends BaseActivityViewModel<ProfileData,
     }
 
     public void checkCo() {
-        Log.d("bao.nt", "3");
+        Log.d("cin", "3");
         String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-        L.d("bao.nt",token);
+        L.d("cin",token);
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
                 .doCoo("Bearer "+token)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -177,7 +177,7 @@ public class ProfileActivityViewModel extends BaseActivityViewModel<ProfileData,
                 .subscribe(response -> {
                     Log.d("aaaaaaa", response.getData().toString()+"");
                     if (response.getData().size() > 0){
-                        Log.d("bao.nt", "aaaaaaaaaaaaaaaa");
+                        Log.d("cin", "aaaaaaaaaaaaaaaa");
                         mLiveCoSuccess.setValue(response.getData().get(0));
                     }
                 }, throwable -> {

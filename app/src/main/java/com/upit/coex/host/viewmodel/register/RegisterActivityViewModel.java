@@ -39,14 +39,14 @@ public class RegisterActivityViewModel extends BaseActivityViewModel<RegisterDat
 
                             mLiveSuccess.setValue("Register success");
                             //mLive.setValue(response.getData());
-//                    Log.d("bao.nt:", "    response.code(): " + response.getCode());
-//                    Log.d("bao.nt:", "    response.message " + response.getMessage());
-//                    Log.d("bao.nt:", "    response.errorBody(): " + response.getStatus() );
+//                    Log.d("cin:", "    response.code(): " + response.getCode());
+//                    Log.d("cin:", "    response.message " + response.getMessage());
+//                    Log.d("cin:", "    response.errorBody(): " + response.getStatus() );
                         }, throwable -> {
                             BaseDataError error = new BaseDataError(throwable);
                             if (error.getmMessage() != null) {
                                 mLiveFail.setValue(error.getmMessage());
-                                Log.d("bao.nt", error.getmMessage());
+                                Log.d("cin", error.getmMessage());
                             } else {
                                 mLiveFail.setValue(throwable.getMessage());
                             }

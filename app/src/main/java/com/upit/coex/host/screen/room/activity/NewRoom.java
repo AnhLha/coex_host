@@ -102,7 +102,7 @@ public class NewRoom extends BaseActivity<RoomActivityViewModel> implements Room
         btnCreateRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("bao.nt11", "vao onclik");
+                Log.d("cin11", "vao onclik");
                 mViewModal.addRoom(name.getText().toString(), about.getText().toString(), price.getText().toString(), maxPersion.getText().toString() );
 
             }

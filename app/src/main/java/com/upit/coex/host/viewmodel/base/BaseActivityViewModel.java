@@ -15,7 +15,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import retrofit2.Retrofit;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public abstract class BaseActivityViewModel<T, V, Q> extends ViewModel {

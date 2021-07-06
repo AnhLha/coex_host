@@ -213,7 +213,7 @@ public class DetailBooking extends BaseActivity<CheckStatusViewModel> implements
     }
 
     public void startDialogConfirmCheckInOut(String id, boolean check) {
-        Log.d("bao.nt", "Co vao day nay1");
+        Log.d("cin", "Co vao day nay1");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View view = inflater.inflate(R.layout.confirm_change, null);
@@ -249,7 +249,7 @@ public class DetailBooking extends BaseActivity<CheckStatusViewModel> implements
     }
 
     public void startDialogConfirmCheckOut() {
-        Log.d("bao.nt", "Co vao day nay1");
+        Log.d("cin", "Co vao day nay1");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View view = inflater.inflate(R.layout.confirm_change, null);

@@ -128,11 +128,11 @@ public class CoActivityViewModel extends BaseActivityViewModel<CoData, Pair, Pai
 
     @Override
     public void createCo(CoRequest coRequest) {
-        L.d("bao.nt", "multi part get image " + coRequest.getmPhoto().get(index));
+        L.d("cin", "multi part get image " + coRequest.getmPhoto().get(index));
         if (isPermission(new String[]{
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE})) {
-            L.d("bao.nt", "anh tu1");
+            L.d("cin", "anh tu1");
 
             //RequestBody photo = RequestBody.create(MediaType.parse("multipart/form-data"),file);
 
@@ -158,28 +158,28 @@ public class CoActivityViewModel extends BaseActivityViewModel<CoData, Pair, Pai
 
             //MultipartBody.Part[] photos = new MultipartBody.Part[coRequest.getmPhoto().size() - 1];
             // for (index = 0; index < coRequest.getmPhoto().size() - 1; index++) {
-            L.d("bao.nt", "multi part get image " + coRequest.getmPhoto().get(index));
+            L.d("cin", "multi part get image " + coRequest.getmPhoto().get(index));
 
             for (index = 0; index < coRequest.getmPhoto().size(); index++) {
 
                 File file = new File(CoexHelper.getRealPathFromURI(mView, Uri.parse(coRequest.getmPhoto().get(index))));
-                L.d("bao.nt", "absolute path " + file.getAbsolutePath());
+                L.d("cin", "absolute path " + file.getAbsolutePath());
 
                 //nen anh
                 Bitmap scaledBitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
                 if (scaledBitmap == null) {
-                    Log.d("bao.nt", "aaaaaaaaaaaaa");
+                    Log.d("cin", "aaaaaaaaaaaaa");
                 }
-                L.d("bao.nt", "absolute path1 " + file.getAbsolutePath());
+                L.d("cin", "absolute path1 " + file.getAbsolutePath());
                 scaledBitmap = getResizedBitmap(scaledBitmap, 3000);
-                L.d("bao.nt", "absolute path2 " + file.getAbsolutePath());
+                L.d("cin", "absolute path2 " + file.getAbsolutePath());
                 File newFile = null;
                 try {
-                    L.d("bao.nt", "absolute path3 " + file.getAbsolutePath());
+                    L.d("cin", "absolute path3 " + file.getAbsolutePath());
                     newFile = saveBitmap(scaledBitmap);
-                    L.d("bao.nt", "absolute path4 " + file.getAbsolutePath());
+                    L.d("cin", "absolute path4 " + file.getAbsolutePath());
                 } catch (IOException e) {
-                    L.d("bao.nt", "absolute path5 " + file.getAbsolutePath());
+                    L.d("cin", "absolute path5 " + file.getAbsolutePath());
                     e.printStackTrace();
                 }
 //                    /storage/emulated/0/DCIM/Screenshots/Screenshot_20200401-131049_Uplife.jpg
@@ -188,15 +188,15 @@ public class CoActivityViewModel extends BaseActivityViewModel<CoData, Pair, Pai
 //                    load image in adaptercontent://media/external/images/media/84
 //                    multi part get image content://media/external/images/media/84
 //                    multi part get image content://media/external/images/media/77
-//                    2020-04-03 13:17:08.376 28836-28836/com.example.coex_host D/bao.nt:  absolute path /storage/emulated/0/DCIM/Camera/20200401_133602.jpg
+//                    2020-04-03 13:17:08.376 28836-28836/com.example.coex_host D/cin:  absolute path /storage/emulated/0/DCIM/Camera/20200401_133602.jpg
 
                 //********************************************
-                L.d("bao.nt", "absolute path 5" + file.getAbsolutePath());
+                L.d("cin", "absolute path 5" + file.getAbsolutePath());
 
                 RequestBody photo = RequestBody.create(MediaType.parse("image/*"),
                         newFile);
 
-                L.d("bao.nt", "json " + sCoworing);
+                L.d("cin", "json " + sCoworing);
                 photoss.add(photo);
                 photosss[index] = photo;
                 photos.addFormDataPart("photo", file.getName(), photo);
@@ -207,7 +207,7 @@ public class CoActivityViewModel extends BaseActivityViewModel<CoData, Pair, Pai
             //RequestBody.create(MediaType.parse("text/plain"),sCoworing);
 
             String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-            L.d("bao.nt", "json " + sCoworing + "\n----------" + photosss.toString());
+            L.d("cin", "json " + sCoworing + "\n----------" + photosss.toString());
 
             mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
                     .create(CommonConstants.PREFIX_AUTHOR + token,
@@ -219,16 +219,16 @@ public class CoActivityViewModel extends BaseActivityViewModel<CoData, Pair, Pai
                     .subscribe(response -> {
                         mLiveSuccess.setValue(new Pair<String, String>(CommonConstants.CREATE_CO, "Create coo success"));
 //                        mLive.postValue(response.getData());
-                        Log.d("bao.nt", response.getMessage() + response.getData().getName());
+                        Log.d("cin", response.getMessage() + response.getData().getName());
                     }, throwable -> {
                         BaseDataError error = new BaseDataError(throwable);
                         if (error.getmMessage() != null) {
                             mLiveFail.setValue(new Pair<String, String>(CommonConstants.CREATE_CO, error.getmMessage()));
-                            Log.d("bao.nt", error.getmMessage());
+                            Log.d("cin", error.getmMessage());
                         } else {
                             mLiveFail.setValue(new Pair<String, String>(CommonConstants.CREATE_CO, throwable.getMessage()));
                         }
-                        Log.d("bao.nt error", throwable.getMessage());
+                        Log.d("cin error", throwable.getMessage());
                         //truong hop loi mang, server die, timeout, url khong ton tai
                     }));
         }
@@ -254,22 +254,22 @@ public class CoActivityViewModel extends BaseActivityViewModel<CoData, Pair, Pai
     @Override
     public void dataCo() {
         String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-        L.d("bao.nt", token);
+        L.d("cin", token);
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
                 .doCoo("Bearer " + token)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(response -> {
 //                    mLive.setValue(response.size());
-                    Log.d("bao.nt1", response.getData().size() + "");
+                    Log.d("cin1", response.getData().size() + "");
                     if (response.getData().size() > 0) {
-                        Log.d("bao.nt2", response.getData().get(0).getName() + "");
+                        Log.d("cin2", response.getData().get(0).getName() + "");
                         mLive.setValue((CoData) response.getData().get(0));
-                        Log.d("bao.nt3", mLive.getValue().getName());
+                        Log.d("cin3", mLive.getValue().getName());
                     }
 
                 }, throwable -> {
-                    Log.d("bao.nttttt", throwable.getMessage());
+                    Log.d("cintttt", throwable.getMessage());
                 }));
     }
 

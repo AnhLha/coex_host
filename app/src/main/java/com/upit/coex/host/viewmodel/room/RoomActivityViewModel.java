@@ -26,7 +26,7 @@ public class RoomActivityViewModel extends BaseActivityViewModel<CoData, String,
             RoomRequest room = new RoomRequest(name, about, Integer.valueOf(price), Integer.valueOf(maxPer));
             String id = CoexSharedPreference.getInstance().get(CommonConstants.COEX_ID, String.class);
             String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-            Log.d("bao.nt2222", id + "\n" + token);
+            Log.d("cin2222", id + "\n" + token);
 
 //            mLiveSuccess.setValue("Add room success");
             mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(RoomAPI.class)
@@ -37,13 +37,13 @@ public class RoomActivityViewModel extends BaseActivityViewModel<CoData, String,
                     .subscribeOn(Schedulers.io())
                     .subscribe(bookingResponse -> {
                         // xu li
-                        Log.d("bao.ntRoom", "them roi nhe");
+                        Log.d("cinRoom", "them roi nhe");
                         mLiveSuccess.setValue("Add room success!");
                     }, throwable -> {
                         BaseDataError error = new BaseDataError(throwable);
                         if (error.getmMessage() != null){
                             mLiveFail.setValue(error.getmMessage());
-                            Log.d("bao.nt", error.getmMessage());
+                            Log.d("cin", error.getmMessage());
                         }else {
                             mLiveFail.setValue(throwable.getMessage());
                         }
@@ -64,22 +64,22 @@ public class RoomActivityViewModel extends BaseActivityViewModel<CoData, String,
 //    @Override
 //    public void listRoom() {
 //        String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-//        L.d("bao.nt", token);
+//        L.d("cin", token);
 //        mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
 //                .doCoo("Bearer " + token)
 //                .observeOn(AndroidSchedulers.mainThread())
 //                .subscribeOn(Schedulers.io())
 //                .subscribe(response -> {
 ////                    mLive.setValue(response.size());
-//                    Log.d("bao.nt1", response.getData().size() + "");
+//                    Log.d("cin1", response.getData().size() + "");
 //                    if (response.getData().size() > 0) {
-//                        Log.d("bao.nt2", response.getData().get(0).getName() + "");
+//                        Log.d("cin2", response.getData().get(0).getName() + "");
 //                        mLive.setValue((CoData) response.getData().get(0));
-//                        Log.d("bao.nt3", mLive.getValue().getName());
+//                        Log.d("cin3", mLive.getValue().getName());
 //                    }
 //
 //                }, throwable -> {
-//                    Log.d("bao.nttttt", throwable.getMessage());
+//                    Log.d("cintttt", throwable.getMessage());
 //                }));
 //    }
 

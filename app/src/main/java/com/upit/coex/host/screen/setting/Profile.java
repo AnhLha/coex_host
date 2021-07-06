@@ -35,7 +35,7 @@ public class Profile extends BaseActivity<ProfileActivityViewModel> implements P
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         mViewModal = ViewModelProviders.of(this).get(ProfileActivityViewModel.class);
-        Log.d("bao.nt", "vao day dau tien nhe");
+        Log.d("cin", "vao day dau tien nhe");
 
         bindView();
 
@@ -60,7 +60,7 @@ public class Profile extends BaseActivity<ProfileActivityViewModel> implements P
 
         mViewModal.me();
 //        showProfile(co);
-        Log.d("bao.nt", "tiếp tuck vao day");
+        Log.d("cin", "tiếp tuck vao day");
         mViewModal.getmLive().observe(this, new Observer<ProfileData>() {
             @Override
             public void onChanged(ProfileData profileData) {
@@ -138,7 +138,7 @@ public class Profile extends BaseActivity<ProfileActivityViewModel> implements P
         if (requestCode == REQUEST_EDIT_PROFILE && resultCode == RESULT_OK){
 //            String name = data.getStringExtra("name");
 //            String phone =
-            Log.d("bao.nt", "aaaaaaaaaa");
+            Log.d("cin", "aaaaaaaaaa");
             EditProfileData editProfileData = (EditProfileData) data.getSerializableExtra("update_profile");
             txtName.setText(editProfileData.getName());
             txtPhone.setText(editProfileData.getPhone());

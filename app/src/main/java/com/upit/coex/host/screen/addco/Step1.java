@@ -64,7 +64,7 @@ public class Step1 extends BaseActivity<CoActivityViewModel> implements CoContra
         setContentView(R.layout.add_new_coo_step_1);
         mViewModal = ViewModelProviders.of(this).get(CoActivityViewModel.class);
         //
-        //Log.d("bao.nt", "7");
+        //Log.d("cin", "7");
 
         mList.add(new Photo(R.drawable.plus_img));
         Log.d("ListPic1111", mList.size() + "");
@@ -77,7 +77,7 @@ public class Step1 extends BaseActivity<CoActivityViewModel> implements CoContra
         mViewModal.getmLiveSuccess().observe(this, new Observer<Pair>() {
             @Override
             public void onChanged(Pair s) {
-                Log.d("anhtu", "create step 1------------------");
+                Log.d("cin", "create step 1------------------");
                 Log.d("ListPicture21", s.first.toString() + "");
                 if (s.first.equals(CommonConstants.STEP_1)) {
                     Log.d("ListPicture22", s.first.toString() + "");
@@ -112,14 +112,14 @@ public class Step1 extends BaseActivity<CoActivityViewModel> implements CoContra
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        L.d("bao.nt", "new intent step 1");
+        L.d("cin", "new intent step 1");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        L.d("bao.nt", "on start step 1");
+        L.d("cin", "on start step 1");
 
     }
 
@@ -164,8 +164,8 @@ public class Step1 extends BaseActivity<CoActivityViewModel> implements CoContra
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus){
-                    Log.d("bao.nt", "=======================" + hasFocus);
-                    Log.d("bao.nt", "size " + mLocation.size());
+                    Log.d("cin", "=======================" + hasFocus);
+                    Log.d("cin", "size " + mLocation.size());
                     if (mLocation.size() == 0) {
                         dialogLoading.startLoadingDialog();
                         doMap();
@@ -269,7 +269,7 @@ public class Step1 extends BaseActivity<CoActivityViewModel> implements CoContra
 
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
 //            Toast.makeText(this, "back", Toast.LENGTH_SHORT).show();
-            Log.d("bao.nt", "------------------------------");
+            Log.d("cin", "------------------------------");
             CoexSharedPreference.getInstance().put(CommonConstants.TOKEN, "");
             this.finish();
 
@@ -287,12 +287,12 @@ public class Step1 extends BaseActivity<CoActivityViewModel> implements CoContra
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("bao.nt", "des step 1");
+        Log.d("cin", "des step 1");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("anhtu", "pau step 1");
+        Log.d("cin", "pau step 1");
     }
 }

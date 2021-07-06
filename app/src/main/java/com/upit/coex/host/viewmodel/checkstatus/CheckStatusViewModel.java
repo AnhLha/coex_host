@@ -44,17 +44,17 @@ public class CheckStatusViewModel extends BaseActivityViewModel<TransactionData,
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(checkInOutResponse -> {
-                    Log.d("bao.nt", checkInOutResponse.getCode() + "-----------------");
+                    Log.d("cin", checkInOutResponse.getCode() + "-----------------");
                     mLiveSuccess.setValue(checkInOutResponse.getData().getKey());
                 }, throwable -> {
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null) {
                         mLiveFail.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     } else {
                         mLiveFail.setValue(throwable.getMessage());
                     }
-//                    Log.d("bao.nt", "-------------" + throwable.getMessage() + "|" );
+//                    Log.d("cin", "-------------" + throwable.getMessage() + "|" );
                 }));
     }
 
@@ -66,14 +66,14 @@ public class CheckStatusViewModel extends BaseActivityViewModel<TransactionData,
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(checkInOutResponse -> {
-                    Log.d("bao.nt", checkInOutResponse.getCode() + "-----------------");
+                    Log.d("cin", checkInOutResponse.getCode() + "-----------------");
                     mCheckOutSucess.setValue(checkInOutResponse.getData().getKey());
                 }, throwable -> {
 
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null) {
                         mCheckOutFail.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     } else {
                         mCheckOutFail.setValue(throwable.getMessage());
                     }
@@ -113,7 +113,7 @@ public class CheckStatusViewModel extends BaseActivityViewModel<TransactionData,
                         BaseDataError error = new BaseDataError(throwable);
                         if (error.getmMessage() != null) {
                             this.mLiveFail.setValue(error.getmMessage());
-                            Log.d("bao.nt", error.getmMessage());
+                            Log.d("cin", error.getmMessage());
                         } else {
                             this.mLiveFail.setValue(throwable.getMessage());
                         }
@@ -130,7 +130,7 @@ public class CheckStatusViewModel extends BaseActivityViewModel<TransactionData,
                         BaseDataError error = new BaseDataError(throwable);
                         if (error.getmMessage() != null) {
                             this.mLiveFail.setValue(error.getmMessage());
-                            Log.d("bao.nt", error.getmMessage());
+                            Log.d("cin", error.getmMessage());
                         } else {
                             this.mLiveFail.setValue(throwable.getMessage());
                         }
@@ -151,7 +151,7 @@ public class CheckStatusViewModel extends BaseActivityViewModel<TransactionData,
                     BaseDataError error = new BaseDataError(throwable);
                     if (error.getmMessage() != null) {
                         this.mLiveFail.setValue(error.getmMessage());
-                        Log.d("bao.nt", error.getmMessage());
+                        Log.d("cin", error.getmMessage());
                     } else {
                         this.mLiveFail.setValue(throwable.getMessage());
                     }

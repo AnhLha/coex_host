@@ -30,7 +30,7 @@ import retrofit2.Retrofit;
 import static com.upit.coex.host.constants.splash.SplashConstant.SPLASH_CHECK_TOKEN_DISPOSAL;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public class SplashActivityViewModel extends BaseActivityViewModel implements SplashContract.SplashInterfaceViewModel{
@@ -49,14 +49,14 @@ public class SplashActivityViewModel extends BaseActivityViewModel implements Sp
 
         // Với API >= 23,  hỏi người dùng cho phép xem vị trí của họ.
         if (Build.VERSION.SDK_INT >= 23) {
-            Log.d("bao.nt", "1");
+            Log.d("cin", "1");
 
             boolean isFull = isFullPermissions(permissions);
-            Log.d("bao.nt", isFull+"");
+            Log.d("cin", isFull+"");
             getPermissions().postValue(permissions);
             return isFull;
         }else{
-            Log.d("bao.nt", "2");
+            Log.d("cin", "2");
             return true;
         }
     }
@@ -82,7 +82,7 @@ public class SplashActivityViewModel extends BaseActivityViewModel implements Sp
 
     @Override
     public void checkToken() {
-        Log.d("bao.nt", "0");
+        Log.d("cin", "0");
         String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
         L.d(TAG, "token: " + token);
         ApiRepository
@@ -124,9 +124,9 @@ public class SplashActivityViewModel extends BaseActivityViewModel implements Sp
     }
 
     public void checkCo() {
-        Log.d("bao.nt", "3");
+        Log.d("cin", "3");
         String token = CoexSharedPreference.getInstance().get(CommonConstants.TOKEN, String.class);
-        L.d("bao.nt",token);
+        L.d("cin",token);
         mCompositeDispose.add(((Retrofit) CoexOptional.getInstance().setObject(super.getRetrofit(CommonConstants.BASE_URL + "")).getValue()).create(CoAPI.class)
                 .doCoo("Bearer "+token)
                 .observeOn(AndroidSchedulers.mainThread())

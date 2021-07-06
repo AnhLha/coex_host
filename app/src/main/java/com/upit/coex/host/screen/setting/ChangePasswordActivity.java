@@ -53,7 +53,7 @@ public class ChangePasswordActivity extends BaseActivity<ProfileActivityViewMode
 //                CoexSharedPreference.getInstance().put(CommonConstants.SERVICE_CO, "");
 //                CoexSharedPreference.getInstance().put(CommonConstants.COEX_ID, "");
 //                CoexSharedPreference.getInstance().put(CommonConstants.CO,"");
-////                Log.d("bao.nt", "aaaaaaaaaaa");
+////                Log.d("cin", "aaaaaaaaaaa");
 //                Intent intent = new Intent(ChangePasswordActivity.this, LoginActivity.class);
 //                startActivity(intent);
 //                finish();
@@ -89,7 +89,7 @@ public class ChangePasswordActivity extends BaseActivity<ProfileActivityViewMode
 
         //
         btnChange.setOnClickListener(v -> {
-            Log.d("bao.nt", "Co vao day nay");
+            Log.d("cin", "Co vao day nay");
             startDialogConfirm();
 //            mViewModal.changPassword(edtPassOld.getText().toString(), edtPassNew.getText().toString(), edtCon.getText().toString());
         });
@@ -110,7 +110,7 @@ public class ChangePasswordActivity extends BaseActivity<ProfileActivityViewMode
     }
 
     public void startDialogConfirm(){
-        Log.d("bao.nt", "Co vao day nay1");
+        Log.d("cin", "Co vao day nay1");
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View view = inflater.inflate(R.layout.confirm_change, null);

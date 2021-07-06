@@ -92,7 +92,7 @@ public class SettingFragment extends Fragment {
             CoexToast.makeToast(getActivity(), Toast.LENGTH_LONG, s);
         });
 
-        Log.d("bao.nt", "nguyen Thien Bao");
+        Log.d("cin", "nguyen Thien Bao");
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -133,7 +133,7 @@ public class SettingFragment extends Fragment {
         CoexSharedPreference.getInstance().put(CommonConstants.SERVICE_CO, "");
         CoexSharedPreference.getInstance().put(CommonConstants.COEX_ID, "");
         CoexSharedPreference.getInstance().put(CommonConstants.CO,"");
-        Log.d("bao.nt", "aaaaaaaaaaa");
+        Log.d("cin", "aaaaaaaaaaa");
         Intent intent = new Intent(getContext(), LoginActivity.class);
         startActivity(intent);
         getActivity().finish();
@@ -141,7 +141,7 @@ public class SettingFragment extends Fragment {
 
 
     public void startDialogConfirm(){
-        Log.d("bao.nt", "Co vao day nay1");
+        Log.d("cin", "Co vao day nay1");
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = this.getLayoutInflater();
         View view = inflater.inflate(R.layout.confirm_change, null);

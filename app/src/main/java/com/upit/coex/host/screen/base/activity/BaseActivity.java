@@ -22,7 +22,7 @@ import com.upit.coex.host.viewmodel.splash.SplashActivityViewModel;
 import static com.upit.coex.host.constants.splash.SplashConstant.REQUEST_PERMISSION;
 
 /**
- * Created by chien.lx on 3/9/2020.
+ * Created by cin on 3/9/2020.
  */
 
 public abstract class BaseActivity<T extends BaseActivityViewModel> extends AppCompatActivity {
@@ -86,7 +86,7 @@ public abstract class BaseActivity<T extends BaseActivityViewModel> extends AppC
             case REQUEST_PERMISSION: {
                 if (grantResults.length > 1) {
                     if(this instanceof  SplashActivity){
-                        Log.d("bao.nt", "sdfnjkasndkln");
+                        Log.d("cin", "sdfnjkasndkln");
                         ((SplashActivityViewModel) mViewModal).checkToken();
                     }
                     for(int result : grantResults){
