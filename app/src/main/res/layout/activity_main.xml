@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="41dp">
+
+                <ImageButton
+                    android:id="@+id/imgBackList"
+                    android:layout_width="13dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/marginStartContext"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/addNewCoo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/imgBackList"
+                    android:layout_centerInParent="true"
+                    android:text="@string/add_new_coo"
+                    android:textAppearance="@style/coo_yen_hoa" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_marginLeft="@dimen/marginStartContext"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/service"
+                android:textAppearance="@style/about_space" />
+
+            <ImageButton
+                android:id="@+id/iconWifi"
+                android:layout_width="@dimen/icon_h_w"
+                android:layout_height="@dimen/icon_h_w"
+                android:layout_below="@id/txtService"
+                android:layout_alignLeft="@id/txtService"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="28dp" />
+            <!--                android:src="@drawable/ic_wifi" />-->
+
+            <ImageButton
+                android:id="@+id/iconDrink"
+                android:layout_width="@dimen/icon_h_w"
+                android:layout_height="@dimen/icon_h_w"
+                android:layout_below="@id/iconWifi"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo2" />
+            <!--android:src="@drawable/ic_drink" />-->
+
+            <ImageButton
+                android:id="@+id/iconConver"
+                android:layout_width="@dimen/icon_h_w"
+                android:layout_height="@dimen/icon_h_w"
+                android:layout_below="@id/iconDrink"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo2" />
+            <!--android:src="@drawable/ic_conversion_call" />-->
+
+            <ImageButton
+                android:id="@+id/iconAirCond"
+                android:layout_width="@dimen/icon_h_w"
+                android:layout_height="@dimen/icon_h_w"
+                android:layout_below="@id/iconConver"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo2" />
+            <!--  android:src="@drawable/ic_air_conditioning" />-->
+
+            <ImageButton
+                android:id="@+id/iconPrinter"
+                android:layout_width="@dimen/icon_h_w"
+                android:layout_height="@dimen/icon_h_w"
+                android:layout_below="@id/iconAirCond"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo2" />
+            <!-- android:src="@drawable/ic_printer" />-->
+
+            <ImageButton
+                android:id="@+id/iconOther"
+                android:layout_width="@dimen/icon_h_w"
+                android:layout_height="@dimen/icon_h_w"
+                android:layout_below="@id/iconPrinter"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo2" />
+            <!--android:src="@drawable/ic_home" />-->
+
+            <TextView
+                android:id="@+id/txtDetailWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconWifi"
+                android:layout_marginStart="@dimen/marginStartContext"
+                android:layout_toRightOf="@id/iconWifi"
+                android:text="@string/detail_wifi"
+                android:textAppearance="@style/detail_icon" />
+
+            <TextView
+                android:id="@+id/txtDetailDrink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtDetailWifi"
+                android:layout_alignTop="@id/iconDrink"
+                android:layout_toRightOf="@id/iconDrink"
+                android:text="@string/detail_drink"
+                android:textAppearance="@style/detail_icon" />
+
+            <TextView
+                android:id="@+id/txtDetailConver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtDetailWifi"
+                android:layout_alignTop="@id/iconConver"
+                android:layout_toRightOf="@id/iconConver"
+                android:text="@string/detail_conversion"
+                android:textAppearance="@style/detail_icon" />
+
+            <TextView
+                android:id="@+id/txtDetailAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtDetailWifi"
+                android:layout_alignTop="@id/iconAirCond"
+                android:layout_toRightOf="@id/iconAirCond"
+                android:text="@string/detail_air"
+                android:textAppearance="@style/detail_icon" />
+
+            <TextView
+                android:id="@+id/txtDetailPrinter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtDetailWifi"
+                android:layout_alignTop="@id/iconPrinter"
+                android:layout_toRightOf="@id/iconPrinter"
+                android:text="@string/detail_printer"
+                android:textAppearance="@style/detail_icon" />
+
+            <TextView
+                android:id="@+id/txtDetailOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtDetailWifi"
+                android:layout_alignTop="@id/iconOther"
+                android:text="@string/other_service"
+                android:textAppearance="@style/detail_icon"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/coffee"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_below="@id/txtDetailOther"
+                android:layout_alignLeft="@id/txtDetailOther"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:paddingLeft="@dimen/paddingCoffee"
+                android:text="@string/coffee" />
+
+            <EditText
+                android:id="@+id/edtAddOtherNew"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/coffee"
+                android:layout_alignLeft="@id/txtDetailOther"
+                android:layout_alignRight="@id/checkWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:layout_marginRight="@dimen/add_new_other" />
+            <!--                android:background="@drawable/edt_normal" />-->
+
+            <Button
+                android:id="@+id/btnAddOtherNew"
+                android:layout_width="39dp"
+                android:layout_height="14dp"
+                android:layout_alignTop="@id/edtAddOtherNew"
+                android:layout_alignRight="@id/checkWifi"
+
+                android:text="@string/add_new"
+                android:textAppearance="@style/textNormal" />
+            <!--            android:background="@drawable/button_normal"-->
+
+            <CheckBox
+                android:id="@+id/checkWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconWifi"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/marginStartContext" />
+
+            <CheckBox
+                android:id="@+id/checkCon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconConver"
+                android:layout_alignRight="@id/checkWifi" />
+
+            <CheckBox
+                android:id="@+id/checkDrink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconDrink"
+                android:layout_alignRight="@id/checkWifi" />
+
+            <CheckBox
+                android:id="@+id/checkPrinter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconPrinter"
+                android:layout_alignRight="@id/checkWifi" />
+
+            <CheckBox
+                android:id="@+id/checkAir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iconAirCond"
+                android:layout_alignRight="@id/checkWifi" />
+
+            <TextView
+                android:id="@+id/textStyleRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtAddOtherNew"
+                android:layout_alignLeft="@id/txtService"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:text="@string/style_room"
+                android:textAppearance="@style/about_space" />
+
+            <RelativeLayout
+                android:id="@+id/viewStyleRoom"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/textStyleRoom"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_alignRight="@id/checkWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo">
+                <!--                android:background="@drawable/customer_layout">-->
+
+                <ImageView
+                    android:id="@+id/iconShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginCustomerRoom"
+                    android:layout_marginTop="@dimen/marginCustomerRoom" />
+                <!--                    android:src="@drawable/sharedroom" />-->
+
+                <TextView
+                    android:id="@+id/txtSharedRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_below="@id/iconShare"
+                    android:layout_alignLeft="@id/iconShare"
+                    android:layout_marginTop="@dimen/marginCustomerRoom"
+                    android:text="@string/shared_room"
+                    android:textAppearance="@style/address_coo" />
+
+                <TextView
+                    android:id="@+id/maxPersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/txtSharedRoom"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/marginCustomerRoom"
+                    android:text="@string/max_person_room"
+                    android:textAppearance="@style/address_coo" />
+
+                <TextView
+                    android:id="@+id/txtYouWill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/txtSharedRoom"
+                    android:layout_alignLeft="@id/iconShare"
+                    android:layout_marginTop="@dimen/marginCustomerRoom"
+                    android:text="@string/you_will"
+                    android:textAppearance="@style/simply_dumm" />
+
+                <TextView
+                    android:id="@+id/txtCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:layout_below="@id/txtYouWill"
+                    android:layout_alignLeft="@id/iconShare"
+                    android:layout_marginTop="@dimen/marginCustomerRoom"
+                    android:text="@string/vnd_hour"
+                    android:textAppearance="@style/textCost" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnAddMoreStyleRoom"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/viewStyleRoom"
+                android:layout_alignLeft="@id/iconWifi"
+                android:layout_alignRight="@id/checkWifi"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+
+                android:text=""
+                android:textAppearance="@style/address_coo" />
+            <!--    android:background="@drawable/button_add_new-->
+
+            <RelativeLayout
+                android:id="@+id/viewBottom"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/btnAddMoreStyleRoom"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/marginDetailCoo2">
+                <!--                android:src="@drawable/view_bottom">-->
+
+                <ImageView
+                    android:id="@+id/e1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="@dimen/marginStartContext"
+                    android:layout_marginTop="@dimen/marginDetailCoo" />
+                <!--                    android:background="@drawable/ell_10" />-->
+
+                <ImageView
+                    android:id="@+id/e2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/e1"
+                    android:layout_centerInParent="true" />
+
+                <!--                android:background="@drawable/ell_10"-->
+
+                <ImageView
+                    android:id="@+id/e3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignTop="@id/e1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/marginStartContext" />
+                <!--                    android:src="@drawable/ell_12" />-->
+
+                <TextView
+                    android:id="@+id/d1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/e1"
+                    android:layout_alignLeft="@id/e1"
+                    android:layout_marginTop="@dimen/marginIcon"
+                    android:text="@string/d1"
+                    android:textAppearance="@style/stepStatus" />
+
+                <TextView
+                    android:id="@+id/d2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/e2"
+                    android:layout_alignTop="@id/d1"
+                    android:text="@string/d2"
+                    android:textAppearance="@style/stepStatus" />
+
+                <TextView
+                    android:id="@+id/d3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/d1"
+                    android:layout_alignRight="@id/e3"
+                    android:text="@string/d3"
+                    android:textAppearance="@style/stepStatus" />
+
+                <ImageView
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignTop="@id/e1"
+                    android:layout_marginTop="@dimen/marginIcon"
+                    android:layout_toLeftOf="@id/e2"
+                    android:layout_toRightOf="@id/e1"
+                    android:background="@color/colorRed" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignTop="@id/l1"
+                    android:layout_toLeftOf="@id/e3"
+                    android:layout_toRightOf="@id/e2" />
+                <!--                    android:src="@drawable/line" />-->
+
+                <Button
+                    android:id="@+id/btnNextStep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/d1"
+                    android:layout_alignLeft="@id/e1"
+                    android:layout_alignRight="@id/e3"
+                    android:layout_marginTop="@dimen/marginDetailCoo"
+
+                    android:gravity="center"
+                    android:text="@string/step_2"
+                    android:textAppearance="@style/textNormal" />
+                <!--                android:background="@drawable/button_normal"-->
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

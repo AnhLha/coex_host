@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_activity_role_margin_top">8dp</dimen>
+    <dimen name="login_activity_input_padding_left">8dp</dimen>
+    <dimen name="login_activity_input_padding_right">8dp</dimen>
+    <dimen name="login_activity_small_font_size">12sp</dimen>
+    <dimen name="login_activity_input_height">32dp</dimen>
+    <dimen name="add_new_coo_activity_marker_size">24dp</dimen>
+    <dimen name="add_new_coo_activity_marker_margin_top">8dp</dimen>
+    <dimen name="add_new_coo_activity_marker_margin_right">8dp</dimen>
+    <dimen name="activity_address_content_padding">16dp</dimen>
+    <dimen name="activity_map_address_text_size">14sp</dimen>
+    <dimen name="activity_map_address_margin_bottom">14dp</dimen>
+    <dimen name="activity_map_btn_close_size">30px</dimen>
+    <dimen name="activity_map_name_text_size">14sp</dimen>
+    <dimen name="activity_map_name_margin_top">4dp</dimen>
+    <dimen name="activity_map_address_margin_top">8dp</dimen>
+    <dimen name="activity_map_search_box_margin">8dp</dimen>
+    <dimen name="activity_map_shadow_size">8dp</dimen>
+</resources>

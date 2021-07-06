@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.upit.coex.host">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".CoexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".screen.detailbooking.DetailBooking"></activity>
+        <activity android:name=".screen.room.activity.EditRoom" />
+        <activity android:name=".screen.setting.DetailCo" />
+        <activity android:name=".screen.setting.EditProfile" />
+        <activity android:name=".screen.setting.ChangePasswordActivity" />
+        <activity android:name=".screen.setting.Profile" />
+        <activity android:name=".screen.detailroom.activity.RoomDetailActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".screen.room.activity.AddRoom" />
+        <activity android:name=".screen.room.activity.NewRoom" />
+        <activity android:name=".screen.addco.CreateCo" />
+        <activity android:name=".screen.addco.Step2" />
+        <activity android:name=".screen.addco.Step1">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <!--<activity android:name=".screen.listroom.activity.ListRoom" />-->
+        <activity android:name=".commons.ScanActivityPortrait" />
+        <activity android:name=".screen.mainscreen.activity.MainScreen" />
+        <activity android:name=".screen.addco.SearchAddressActivity" />
+        <activity android:name=".screen.register.activity.RegisterActivity" />
+        <activity android:name=".screen.forgotpassword.activity.ForgotPasswordActivity" />
+        <activity android:name=".screen.splash.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".screen.login.activity.LoginActivity" />
+        <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDS8IDvNfK_UldH1ro-YzikPmWKuu8o6DU" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/default_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service
+            android:name=".service.firebase.CoexFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="android.intent.action.PICK" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

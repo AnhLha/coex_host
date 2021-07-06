@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:elevation="@dimen/elevation"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/view_bottom">
+
+        <TextView
+            android:id="@+id/detailsCo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_room"
+            android:textAppearance="@style/coo_yen_hoa" />
+
+        <TextView
+
+            android:id="@+id/addRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/detailsCo"
+            android:layout_marginRight="@dimen/marginStartContext"
+            android:text="@string/add_room_main"
+            android:textAppearance="@style/view_more"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:id="@+id/logout"
+            android:text="logout"
+            android:layout_alignTop="@id/detailsCo"
+            android:textAppearance="@style/view_more"
+            android:layout_marginLeft="@dimen/marginStartContext"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_above="@id/viewBottom"
+        android:layout_below="@id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/styleRoom"
+            android:layout_alignLeft="@id/aboutSpace"
+            android:layout_alignRight="@id/view_more"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:layout_marginEnd="@dimen/marginStartContext"
+            />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/viewBottom"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+
+        <ImageButton
+            android:background="@color/colorWhile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:text="logout" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

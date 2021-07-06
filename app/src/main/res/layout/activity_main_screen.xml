@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ln_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_choose_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/IconBottomNavigation"
+                android:id="@+id/img_choose_1"
+                android:background="@drawable/ic_home"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_choose_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                style="@style/IconBottomNavigation"
+                android:id="@+id/img_choose_2"
+                android:background="@drawable/ic_barcode_outline"
+                android:backgroundTint="@color/colorBlack"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_choose_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/IconBottomNavigation"
+                android:id="@+id/img_choose_3"
+                android:background="@drawable/imt_group"
+                android:backgroundTint="@color/colorBlack" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/BarrierLine"
+        android:id="@+id/img_border"
+        android:layout_alignTop="@+id/ln_bottom_navigation"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/img_border"
+        android:layout_alignParentTop="true">
+    </FrameLayout>
+
+
+</RelativeLayout>

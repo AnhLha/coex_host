@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/elevation">
+
+        <ImageButton
+            android:id="@+id/imgBackProfile"
+            android:layout_width="@dimen/icon_h_w"
+            android:layout_height="@dimen/icon_h_w"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/profile"
+            android:textAppearance="@style/coo_yen_hoa" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartContext"
+                android:layout_marginTop="@dimen/marginTopLogo"
+                android:text="@string/name"
+                android:textAppearance="@style/about_space" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtName"
+                android:layout_marginStart="@dimen/marginStartContext"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:layout_marginEnd="@dimen/marginStartContext"
+                android:background="@drawable/edt_background"
+                android:fontFamily="@font/roboto_light"
+                android:paddingStart="@dimen/login_activity_input_padding_left"
+                android:paddingEnd="@dimen/login_activity_input_padding_right"
+                android:scrollHorizontally="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtName"
+                android:layout_alignLeft="@id/txtName"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/phone_number"
+                android:textAppearance="@style/about_space" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtPhone"
+                android:layout_alignLeft="@id/edtName"
+                android:layout_alignRight="@id/edtName"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@drawable/edt_background"
+                android:fontFamily="@font/roboto_light"
+                android:paddingStart="@dimen/login_activity_input_padding_left"
+                android:paddingEnd="@dimen/login_activity_input_padding_right"
+
+                android:scrollHorizontally="true"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSubmitProfile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtPhone"
+                android:layout_alignLeft="@id/edtName"
+                android:layout_alignRight="@id/edtName"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@drawable/button_normal"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textAppearance="@style/textNormal" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

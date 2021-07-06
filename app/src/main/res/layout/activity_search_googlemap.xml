@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:elevation="@dimen/activity_map_shadow_size"
+            android:id="@+id/lnPlaceContent"
+            android:background="@drawable/ln_background_wrap_address"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/activity_address_content_padding"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="@dimen/activity_map_btn_close_size"
+                android:layout_gravity="end"
+                android:id="@+id/mapBtnClose"
+                android:src="@drawable/ic_close_map_address"
+                android:layout_height="@dimen/activity_map_btn_close_size">
+
+            </ImageButton>
+            <TextView
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textSize="@dimen/activity_map_name_text_size"
+                android:layout_marginTop="@dimen/activity_map_name_margin_top"
+                android:id="@+id/mapTvName"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:textStyle="normal"
+                android:textSize="@dimen/activity_map_address_text_size"
+                android:layout_marginTop="@dimen/activity_map_address_margin_top"
+                android:layout_marginBottom="@dimen/activity_map_address_margin_bottom"
+                android:id="@+id/mapTvAddress"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <Button
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:id="@+id/mapBtnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit_address"
+                android:textAppearance="@style/textNormal"
+                android:textAllCaps="true"
+                android:background="@drawable/btn_normal_background">
+
+            </Button>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:elevation="@dimen/activity_map_shadow_size"
+        android:background="@drawable/ln_background_wrap_search_box"
+        android:layout_height="wrap_content">
+        <fragment android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

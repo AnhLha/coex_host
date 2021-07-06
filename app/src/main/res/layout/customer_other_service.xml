@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/customer_layout"
+    android:layout_marginRight="@dimen/cus_item"
+    android:layout_marginTop="@dimen/item">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="@string/coffee"
+        android:id="@+id/otherCoffee"
+        android:layout_marginStart="@dimen/item"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/roboto_light"/>
+
+    <ImageButton
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:id="@+id/close_other_coffee"
+        android:layout_toRightOf="@id/otherCoffee"
+        android:layout_marginStart="@dimen/paddingCoffee"
+        android:background="@drawable/icon_c"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/item"/>
+</RelativeLayout>

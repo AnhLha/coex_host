@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/view_bottom">
+
+        <ImageButton
+            android:id="@+id/imgBackMainScreen"
+            android:layout_width="@dimen/icon_h_w"
+            android:layout_height="@dimen/icon_h_w"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txtRoomDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imgBackMainScreen"
+            android:layout_centerInParent="true"
+            android:text="@string/room_detail_txt"
+            android:textAppearance="@style/coo_yen_hoa" />
+
+        <TextView
+            android:id="@+id/editRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/marginStartContext"
+            android:text="@string/edit_room"
+            android:textAppearance="@style/view_more" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleSharedRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginStartContext"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/shared_room"
+                android:textAppearance="@style/about_space"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtYouWill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleSharedRoom"
+                android:layout_alignLeft="@id/titleSharedRoom"
+                android:layout_marginTop="@dimen/marginCustomerRoom"
+                android:text="@string/you_will"
+                android:textAppearance="@style/simply_dumm" />
+
+            <TextView
+                android:id="@+id/txtCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtYouWill"
+                android:layout_alignLeft="@id/titleSharedRoom"
+                android:layout_marginTop="@dimen/marginCustomerRoom"
+                android:text="@string/vnd_hour"
+                android:textAppearance="@style/textCost" />
+
+            <TextView
+                android:id="@+id/txtMaxPersonRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/titleSharedRoom"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/marginStartContext"
+                android:gravity="right"
+                android:text="@string/max_person_room"
+                android:textAppearance="@style/address_coo" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txtCost"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@color/colorS" />
+
+            <TextView
+                android:id="@+id/ourOfService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_alignStart="@id/titleSharedRoom"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/out_of_service"
+                android:textAppearance="@style/about_space" />
+
+            <TextView
+                android:id="@+id/view_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ourOfService"
+                android:layout_alignRight="@id/txtMaxPersonRoom"
+                android:text="@string/view_more"
+                android:textAppearance="@style/view_more" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listSeviceRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ourOfService"
+                android:layout_marginStart="@dimen/marginStartContext"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:layout_marginEnd="@dimen/marginStartContext" />
+
+
+            <ImageView
+                android:id="@+id/line10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/listSeviceRoom"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@color/colorS" />
+
+            <com.upit.coex.host.template.widget.CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line10"
+                android:layout_alignStart="@id/listSeviceRoom"
+                android:layout_alignEnd="@id/listSeviceRoom"
+                android:layout_marginTop="@dimen/marginDetailCoo2" />
+
+            <ImageView
+                android:id="@+id/line11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/calendar"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@color/colorS" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line11"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:visibility="gone"
+                android:id="@+id/progressBar"
+                android:layout_marginBottom="@dimen/marginStartContext"/>
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/about_space"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/line11"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="No booking"
+                android:layout_marginBottom="@dimen/marginStartContext"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listUsers"
+                android:layout_below="@id/line11"
+                android:layout_marginBottom="@dimen/marginStartContext">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

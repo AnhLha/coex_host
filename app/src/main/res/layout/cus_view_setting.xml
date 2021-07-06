@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/customer_layout">
+    <ImageView
+        android:layout_marginTop="@dimen/marginDetailCoo2"
+        android:id="@+id/imgPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/marginStartContext"
+        android:layout_marginEnd="@dimen/marginStartContext"/>
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        android:layout_below="@id/imgPicture"
+        android:layout_marginTop="@dimen/marginDetailCoo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/marginDetailCoo2"
+        android:fontFamily="@font/roboto_light"/>
+</RelativeLayout>

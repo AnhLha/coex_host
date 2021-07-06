@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="fill_parent"
+        android:layout_height="41dp">
+
+        <TextView
+            android:id="@+id/txtBookingReferenceDetail"
+            style="@style/coo_yen_hoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="adsfadsf" />
+
+
+        <ImageButton
+            android:id="@+id/imgBackRoomDetail"
+            android:layout_width="@dimen/icon_h_w"
+            android:layout_height="@dimen/icon_h_w"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:background="@drawable/ic_back" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:layout_marginTop="@dimen/marginDetailCoo2">
+
+        <TextView
+            android:id="@+id/inf_cus"
+            style="@style/about_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:text="@string/inf_cus" />
+
+        <TextView
+            android:id="@+id/titleEmail"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inf_cus"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/titlePhone"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleEmail"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/phone_number" />
+
+        <ImageView
+            android:id="@+id/line_inf1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/titlePhone"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_alignEnd="@id/txtEmail"
+            android:layout_marginTop="@dimen/marginDetailCoo2"
+            android:background="@color/colorS" />
+
+        <TextView
+            android:id="@+id/inf_booking"
+            style="@style/about_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_inf1"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo2"
+            android:text="@string/inf_booking" />
+
+        <TextView
+            android:id="@+id/titleNumberGuset"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inf_booking"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/number_of_guest" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleNumberGuset"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/date_of_app" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/time_of_app" />
+
+
+        <TextView
+            android:id="@+id/titleDuration"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/total_duration" />
+
+        <TextView
+            android:id="@+id/titleStatus"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleDuration"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/status" />
+
+        <TextView
+            android:id="@+id/titleCheckIn"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleStatus"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/check_in" />
+
+        <TextView
+            android:id="@+id/titleCheckOut"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleCheckIn"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/check_out" />
+        <TextView
+            android:id="@+id/titlePayment"
+            style="@style/simply_dumm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleCheckOut"
+            android:layout_alignStart="@id/inf_cus"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:text="@string/payment" />
+
+        <ImageView
+            android:id="@+id/line_inf2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/titlePayment"
+            android:layout_alignStart="@id/line_inf1"
+            android:layout_alignEnd="@id/line_inf1"
+            android:layout_marginTop="@dimen/marginDetailCoo2"
+            android:background="@color/colorS" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="@dimen/elevation">
+
+            <TextView
+                android:id="@+id/txtShowStatus"
+                style="@style/address_coo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginEnd="@dimen/marginStartContext"
+                android:text="@string/number_of_guest"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCheckStatusBooking"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/marginStartContext"
+                android:background="@drawable/button_normal"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Check in"
+                android:textColor="@color/colorWhile" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/marginStartContext">
+
+                <TextView
+                    android:id="@+id/titleTotal"
+                    style="@style/about_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_amount" />
+
+                <TextView
+                    android:id="@+id/txtTotalMoney"
+                    style="@style/textCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTotal"
+                    android:layout_alignStart="@id/titleTotal"
+                    android:layout_marginTop="@dimen/item"
+                    android:text="@string/total_money" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titleEmail"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/marginStartContext"
+            android:text="@string/ex_profile"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titlePhone"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/ex_profile"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtNumberGuest"
+            style="@style/address_coo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titleNumberGuset"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/number_of_guest" />
+
+        <TextView
+            android:id="@+id/txtDateOfApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/date"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/time_ex"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtTimeOfApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/time"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/time_ex"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titleDuration"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/duration_ex"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titleStatus"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/status"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtCheckIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titleCheckIn"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/duration_ex"
+            android:textAppearance="@style/address_coo" />
+
+        <TextView
+            android:id="@+id/txtCheckOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titleCheckOut"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/duration_ex"
+            android:textAppearance="@style/address_coo" />
+        <TextView
+            android:id="@+id/txtPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/titlePayment"
+            android:layout_alignEnd="@id/txtEmail"
+            android:text="@string/duration_ex"
+            android:textAppearance="@style/address_coo" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

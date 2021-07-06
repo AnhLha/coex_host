@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CalendarView">
+        <!--<attr name="colorBar" format="color|reference" />-->
+        <!--<attr name="contentBar" format="color|reference"/>-->
+        <!--<attr name="barTitle" format="string" localization="suggested"/>-->
+        <!--<attr name="message" format="string" localization="suggested"/>-->
+        <attr name="height" format="dimension"/>
+    </declare-styleable>
+
+<!--    rectWidth = a.getInteger(R.styleable.ScannerOverlay_square_width, getResources().getInteger(R.integer.scanner_rect_width));-->
+<!--    rectHeight = a.getInteger(R.styleable.ScannerOverlay_square_height, getResources().getInteger(R.integer.scanner_rect_height));-->
+<!--    lineColor = a.getColor(R.styleable.ScannerOverlay_line_color, ContextCompat.getColor(context, R.color.scanner_line));-->
+<!--    lineWidth = a.getInteger(R.styleable.ScannerOverlay_line_width, getResources().getInteger(R.integer.line_width));-->
+<!--    frames = a.getInteger(R.styleable.ScannerOverlay_line_speed, getResources().getInteger(R.integer.line_width));-->
+
+    <declare-styleable name="ScannerOverlay">
+        <attr name="square_width" format="integer"/>
+        <attr name="square_height" format="integer"/>
+        <attr name="line_color" format="color"/>
+        <attr name="line_width" format="integer"/>
+        <attr name="line_speed" format="integer"/>
+    </declare-styleable>
+</resources>

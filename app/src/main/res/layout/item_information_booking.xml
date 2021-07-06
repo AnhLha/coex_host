@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/marginDetailCoo2"
+    android:background="@drawable/item_schedule"
+    android:layout_marginStart="@dimen/marginStartContext"
+    android:layout_marginEnd="@dimen/marginStartContext">
+    <ImageButton
+        android:id="@+id/imgItem"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/relative"
+        android:layout_alignBottom="@id/relative"
+        android:background="@drawable/ic_alarm_outline_cancel"
+        android:layout_marginStart="@dimen/marginDetailCoo" />
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imgItem"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="@dimen/marginDetailCoo"
+        android:layout_marginTop="@dimen/marginDetailCoo"
+        android:layout_marginBottom="@dimen/marginDetailCoo">
+        <TextView
+            android:id="@+id/txtBookingReference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="anh tu"
+            style="@style/about_space"
+            android:textColor="@color/colorRed"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <ImageView
+            android:id="@+id/imgEmail"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_mail_outline"
+            android:layout_alignTop="@id/txtItemEmail"
+            android:layout_alignBottom="@id/txtItemEmail"
+            app:layout_constraintDimensionRatio="1:1"/>
+        <TextView
+            android:id="@+id/txtItemEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="ádfasdfadsfdssdfaasdf"
+            style="@style/address_coo"
+            android:layout_below="@id/txtBookingReference"
+            android:layout_marginTop="@dimen/item"
+            android:layout_toEndOf="@id/imgEmail"/>
+
+        <ImageView
+            android:id="@+id/imgPhone"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_call_outline"
+            android:layout_below="@id/txtItemEmail"
+            android:layout_alignTop="@id/txtItemPhone"
+            android:layout_alignBottom="@id/txtItemPhone"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+        <TextView
+            android:id="@+id/txtItemPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ádfasdfadsfdssdfaasdf"
+            style="@style/address_coo"
+            android:layout_below="@id/txtItemEmail"
+            android:layout_marginTop="@dimen/item"
+            android:layout_toEndOf="@id/imgPhone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/address_coo"
+            android:layout_alignTop="@id/txtBookingReference"
+            android:layout_alignParentRight="true"
+            android:text="timestart"
+            android:id="@+id/txtStatus" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/address_coo"
+            android:layout_alignTop="@id/txtItemEmail"
+            android:layout_alignRight="@id/txtStatus"
+            android:text="timestart"
+            android:id="@+id/txtTimeStart" />
+
+        <TextView
+            android:id="@+id/txtTimeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/address_coo"
+            android:layout_alignTop="@id/txtItemPhone"
+            android:layout_alignRight="@id/txtStatus"
+            android:text="endtime"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

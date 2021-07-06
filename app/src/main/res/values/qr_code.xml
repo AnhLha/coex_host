@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="distance_item_to_borber_layout">20dp</dimen>
+    <dimen name="distance_title_information_to_top_screen">55dp</dimen>
+
+    <dimen name="width_height_icon_bottom_navigation">25dp</dimen>
+
+    <string name="check_in">Check in</string>
+    <string name="check_out">Check out</string>
+
+    <style name="TitleInformation">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ButtonQRCode">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_normal</item>
+        <item name="android:textColor">@color/colorWhile</item>
+    </style>
+    
+    <style name="BarrierLine">
+        <item name="android:background">@color/colorBlack</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="BarrierLineInfo" parent="BarrierLine">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="IconBottomNavigation">
+        <item name="android:layout_width">@dimen/width_height_icon_bottom_navigation</item>
+        <item name="android:layout_height">@dimen/width_height_icon_bottom_navigation</item>
+        <item name="android:backgroundTint">@color/colorBlack</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+</resources>

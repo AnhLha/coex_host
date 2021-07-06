@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/elevation">
+
+        <ImageButton
+            android:id="@+id/imgBackStep3"
+            android:layout_width="@dimen/icon_h_w"
+            android:layout_height="@dimen/icon_h_w"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@drawable/ic_back" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="196dp"
+                android:id="@+id/imgPicture">
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/viewPager"/>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/indicator"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/marginDetailCoo2"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textCooBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_below="@id/imgPicture"
+                android:layout_marginLeft="@dimen/marginStartContext"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/coo_name"
+                android:textAppearance="@style/coo_yen_hoa" />
+
+            <TextView
+                android:id="@+id/addressBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textCooBooking"
+                android:layout_alignStart="@id/textCooBooking"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:layout_marginRight="@dimen/marginStartContext"
+                android:text="@string/coo_address"
+                android:textAppearance="@style/simply_dumm" />
+
+            <ImageView
+                android:id="@+id/line9_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/addressBooking"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@color/colorS" />
+
+            <TextView
+                android:id="@+id/aboutSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line9_1"
+                android:layout_alignStart="@id/textCooBooking"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/about_space"
+                android:textAppearance="@style/about_space" />
+
+            <TextView
+                android:id="@+id/simply_dummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aboutSpace"
+                android:layout_alignStart="@id/aboutSpace"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:layout_marginRight="@dimen/marginStartContext"
+                android:text="@string/simply_dummy"
+                android:textAppearance="@style/simply_dumm" />
+
+            <ImageView
+                android:id="@+id/line9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/simply_dummy"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@color/colorS" />
+
+            <TextView
+                android:id="@+id/ourOfService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line9"
+                android:layout_alignStart="@id/aboutSpace"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/out_of_service"
+                android:textAppearance="@style/about_space" />
+
+            <TextView
+                android:id="@+id/view_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ourOfService"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/marginStartContext"
+                android:text="@string/view_more"
+                android:textAppearance="@style/view_more" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listSeviceCoo"
+                android:layout_alignStart="@id/textCooBooking"
+                android:layout_alignEnd="@id/view_more"
+                android:layout_below="@id/ourOfService"
+                android:layout_marginTop="@dimen/marginDetailCoo"/>
+
+            <ImageView
+                android:id="@+id/line10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/listSeviceCoo"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:background="@color/colorS" />
+
+            <TextView
+                android:id="@+id/styleRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line10"
+                android:layout_alignStart="@id/aboutSpace"
+                android:layout_marginTop="@dimen/marginDetailCoo2"
+                android:text="@string/style_room"
+                android:textAppearance="@style/about_space" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listStyleRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/styleRoom"
+                android:layout_alignLeft="@id/aboutSpace"
+                android:layout_alignRight="@id/view_more"
+                android:layout_marginTop="@dimen/marginDetailCoo"
+                android:layout_marginBottom="@dimen/marginStartContext"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

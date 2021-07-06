@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/customer_layout"
+    android:layout_marginTop="@dimen/marginDetailCoo2">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sharedroom"
+        android:layout_marginTop="@dimen/marginCustomerRoom"
+        android:layout_marginStart="@dimen/marginCustomerRoom"
+        android:id="@+id/iconShare" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSharedRoom"
+        android:layout_below="@id/iconShare"
+        android:textAppearance="@style/about_space"
+        android:text="@string/shared_room"
+        android:layout_alignLeft="@id/iconShare"
+        android:layout_marginTop="@dimen/marginCustomerRoom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtYouWill"
+        android:text="@string/you_will"
+        android:textAppearance="@style/simply_dumm"
+        android:layout_below="@id/txtSharedRoom"
+        android:layout_alignLeft="@id/iconShare"
+        android:layout_marginTop="@dimen/marginCustomerRoom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCost"
+        android:text="@string/vnd_hour"
+        android:textAppearance="@style/textCost"
+        android:layout_below="@id/txtYouWill"
+        android:layout_alignLeft="@id/iconShare"
+        android:layout_marginTop="@dimen/marginCustomerRoom" />
+
+    <Button
+        android:id="@+id/btnCheckStatusOfRoom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/txtCost"
+        android:layout_alignLeft="@id/iconShare"
+        android:layout_marginTop="@dimen/marginCustomerRoom"
+        android:layout_marginEnd="@dimen/marginCustomerRoom"
+        android:background="@drawable/button_add_new"
+        android:text="@string/check_status_room"
+        android:textAppearance="@style/address_coo"
+        android:layout_marginBottom="@dimen/marginDetailCoo"
+        android:fontFamily="@font/roboto_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMaxPersonRoom"
+        android:layout_toEndOf="@id/txtSharedRoom"
+        android:textAppearance="@style/address_coo"
+        android:text="@string/max_person_room"
+        android:gravity="right"
+        android:layout_alignRight="@id/btnCheckStatusOfRoom"
+        android:layout_alignTop="@id/txtSharedRoom" />
+
+
+</RelativeLayout>

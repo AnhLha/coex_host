@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:elevation="@dimen/elevation"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/titleSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Setting"
+            android:textAppearance="@style/coo_yen_hoa" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/viewBottom"
+        android:layout_below="@id/view">
+        <GridView
+            android:layout_marginEnd="@dimen/marginStartContext"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridView"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/marginDetailCoo"
+            android:horizontalSpacing="@dimen/marginDetailCoo"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/viewBottom"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <ImageButton
+            android:background="@color/colorWhile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/setting"
+            android:layout_weight="1"
+            android:background="@color/colorWhile"
+            android:src="@drawable/ic_printer"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/blurbb">
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:src="@drawable/blurb"-->
+    <!--        android:scaleType="centerCrop"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dimBlackColor"
+        >
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="222dp"
+        android:layout_height="106dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@drawable/coex" />
+
+    <TextView
+        android:id="@+id/forpartner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/used"
+        android:layout_below="@id/logo"
+        android:textAppearance="@style/textForPartner"
+        android:layout_marginTop="@dimen/login_activity_role_margin_top"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="@dimen/marginTopLogo"
+        android:layout_marginLeft="@dimen/marginStartContext"
+        android:textAppearance="@style/textNormal"/>
+
+    <EditText
+        android:maxLines="1"
+        android:textSize="@dimen/login_activity_small_font_size"
+        android:scrollHorizontally="true"
+        android:paddingRight="@dimen/login_activity_input_padding_left"
+        android:paddingLeft="@dimen/login_activity_input_padding_left"
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_activity_input_height"
+        android:layout_alignLeft="@id/txtEmail"
+        android:layout_marginRight="@dimen/marginStartContext"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginTop="@dimen/marginTextContent"
+        android:background="@drawable/edt_background"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPassword"
+        android:text="@string/password"
+        android:layout_alignLeft="@id/txtEmail"
+        android:layout_below="@id/edtEmail"
+        android:layout_marginTop="@dimen/marginTwo"
+        android:textAppearance="@style/textNormal" />
+
+    <EditText
+        android:maxLines="1"
+        android:textSize="@dimen/login_activity_small_font_size"
+        android:scrollHorizontally="true"
+        android:paddingRight="@dimen/login_activity_input_padding_right"
+        android:paddingLeft="@dimen/login_activity_input_padding_left"
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_activity_input_height"
+        android:layout_below="@id/txtPassword"
+        android:layout_alignLeft="@id/txtEmail"
+        android:layout_alignRight="@id/edtEmail"
+        android:layout_marginTop="@dimen/marginTextContent"
+        android:background="@drawable/edt_background"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtConfirmPassword"
+        android:text="@string/cofirm_password"
+        android:layout_alignLeft="@id/txtEmail"
+        android:layout_below="@id/edtPassword"
+        android:layout_marginTop="@dimen/marginTwo"
+        android:textAppearance="@style/textNormal" />
+
+    <EditText
+        android:maxLines="1"
+        android:textSize="@dimen/login_activity_small_font_size"
+        android:scrollHorizontally="true"
+        android:paddingRight="@dimen/login_activity_input_padding_right"
+        android:paddingLeft="@dimen/login_activity_input_padding_left"
+        android:id="@+id/edtConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_activity_input_height"
+        android:layout_alignLeft="@id/txtEmail"
+        android:layout_alignRight="@id/edtEmail"
+        android:layout_below="@id/txtConfirmPassword"
+        android:layout_marginTop="@dimen/marginTextContent"
+        android:background="@drawable/edt_background"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:layout_below="@id/edtConfirmPassword"
+        android:layout_alignLeft="@id/edtEmail"
+        android:layout_alignRight="@id/edtEmail"
+        android:text="@string/btnRegister"
+        android:layout_marginTop="@dimen/marginTwo"
+        android:background="@drawable/btn_normal_background"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhile"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLogin"
+        android:text="@string/txtRegister"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/marginEndContext"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:textAppearance="@style/textLink"
+        android:textStyle="italic"/>
+
+</RelativeLayout>

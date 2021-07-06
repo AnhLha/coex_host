@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:id="@+id/view"
+        android:background="@drawable/view_bottom"
+        android:elevation="@dimen/elevation">
+
+        <ImageButton
+            android:id="@+id/imgBackList"
+            android:layout_width="@dimen/icon_h_w"
+            android:layout_height="@dimen/icon_h_w"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@drawable/ic_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/bookingCoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imgBackList"
+            android:text="@string/booking"
+            android:textAppearance="@style/coo_yen_hoa"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/styleRoomBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginLeft="@dimen/marginStartContext"
+        android:layout_marginTop="@dimen/marginDetailCoo2"
+        android:text="@string/style_room"
+        android:textAppearance="@style/about_space" />
+
+    <EditText
+        android:id="@+id/edtStyleRoom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/styleRoomBooking"
+        android:layout_marginLeft="@dimen/marginStartContext"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/marginStartContext"
+        android:background="@drawable/edt_normal"
+        android:hint="@string/time_of_app"
+        android:paddingLeft="@dimen/padding"
+        android:textAppearance="@style/address_coo" />
+
+    <TextView
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtStyleRoom"
+        android:layout_alignLeft="@id/styleRoomBooking"
+        android:layout_marginTop="@dimen/marginDetailCoo2"
+        android:text="@string/people"
+        android:textAppearance="@style/about_space" />
+
+    <EditText
+        android:id="@+id/edtPeople"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/people"
+        android:layout_alignLeft="@id/edtStyleRoom"
+        android:layout_alignRight="@id/edtStyleRoom"
+        android:layout_marginTop="@dimen/marginDetailCoo"
+        android:background="@drawable/edt_normal"
+        android:hint="@string/time_of_app"
+        android:paddingLeft="@dimen/padding"
+        android:textAppearance="@style/address_coo" />
+
+    <TextView
+        android:id="@+id/timeofapp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPeople"
+        android:layout_alignLeft="@id/styleRoomBooking"
+        android:layout_marginTop="@dimen/marginDetailCoo2"
+        android:text="@string/time_of_app"
+        android:textAppearance="@style/about_space" />
+
+    <EditText
+        android:id="@+id/edtTime"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/timeofapp"
+        android:layout_alignLeft="@id/edtStyleRoom"
+        android:layout_marginTop="@dimen/marginDetailCoo"
+        android:background="@drawable/edt_normal"
+        android:hint="@string/chose_the_time"
+        android:paddingLeft="@dimen/padding"
+        android:textAppearance="@style/address_coo" />
+
+    <TextView
+        android:id="@+id/txtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPeople"
+        android:layout_alignLeft="@id/edtDuration"
+        android:layout_alignTop="@id/timeofapp"
+        android:text="@string/duration"
+        android:textAppearance="@style/about_space" />
+
+    <EditText
+        android:id="@+id/edtDuration"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/timeofapp"
+        android:layout_alignTop="@id/edtTime"
+        android:layout_alignRight="@id/edtStyleRoom"
+        android:background="@drawable/edt_normal"
+        android:hint="@string/chose_the_time"
+        android:paddingLeft="@dimen/padding"
+        android:textAppearance="@style/address_coo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/marginDetailCoo"
+        android:elevation="@dimen/elevation">
+
+        <Button
+            android:id="@+id/btnBooking"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/marginDetailCoo"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/button_normal"
+            android:gravity="center"
+            android:text="@string/booking"
+            android:textAppearance="@style/textNormal"
+            android:textColor="@color/colorWhile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:id="@+id/totalVND"
+            android:layout_alignBottom="@id/btnBooking"
+            android:layout_marginStart="@dimen/marginStartContext"
+            android:textAppearance="@style/textCost"
+            android:text="@string/total_money"/>
+
+        <TextView
+            android:layout_above="@id/totalVND"
+            android:layout_marginBottom="@dimen/mariginBox"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:id="@+id/totalAmount"
+            android:textAppearance="@style/address_coo"
+            android:text="@string/total_amount"
+            android:layout_alignLeft="@id/totalVND"/>
+    </RelativeLayout>
+</RelativeLayout>

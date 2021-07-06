@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginRight="@dimen/marginDetailCoo"
+    android:layout_marginTop="@dimen/marginDetailCoo">
+
+    <ImageView
+        android:layout_width="@dimen/icon_h_w"
+        android:layout_height="@dimen/icon_h_w"
+        android:id="@+id/iconService"
+        android:layout_marginLeft="@dimen/item"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_wifi"
+        android:id="@+id/txtIcon"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/iconService"
+        android:layout_marginStart="@dimen/marginDetailCoo"
+        android:layout_marginEnd="@dimen/item"
+        android:textAppearance="@style/detail_icon"/>
+
+</RelativeLayout>

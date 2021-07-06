@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/elevation"
+        android:background="@drawable/view_bottom">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/confirm_change"
+            android:textAppearance="@style/coo_yen_hoa" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/txtQ"
+            android:text="@string/q"
+            android:textAppearance="@style/about_space" />
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMessage"
+            android:layout_marginTop="@dimen/txtQ"
+            android:layout_marginBottom="@dimen/marginDetailCoo2"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/marginStartContext"
+                android:layout_marginEnd="@dimen/btn"
+                android:layout_weight="1"
+                android:background="@drawable/button_add_new"
+                android:text="@string/cancel"
+                android:textAppearance="@style/about_space" />
+
+            <Button
+                android:id="@+id/btnAccepted"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/btn"
+                android:layout_marginEnd="@dimen/marginStartContext"
+                android:layout_weight="1"
+                android:background="@drawable/btn_normal_background"
+                android:text="@string/accepted"
+                android:textAppearance="@style/textNormal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
